@@ -201,3 +201,148 @@ Swift strings are versatile and powerful. Start by mastering these basics:
 
 This foundation will help you work confidently with text in Swift.
 
+---
+
+"# Swift Strings Basics
+
+## 🧠 Key Concepts
+
+* A **string** is a series of characters (letters, punctuation, emoji, etc.).
+* Strings are created using **double quotes**: `"Hello"`.
+* Strings can include escaped double quotes using a **backslash**: `\"`.
+* Swift strings support **multi-line strings** using triple quotes: `"""`.
+* Strings are **case-sensitive**.
+
+## 🄤 Basic String Syntax
+
+```swift
+let actor = "Denzel Washington"
+let filename = "paris.jpg"
+let result = "⭐️ You win! ⭐️"
+let quote = "Then he tapped a sign saying \"Believe\" and walked away."
+```
+
+## 📏 Multi-line Strings
+Use triple quotes for multi-line string literals:
+
+```swift
+let movie = """
+A day in
+the life of an
+Apple engineer
+"""
+```
+
+## 🔧 Useful String Properties and Methods
+
+### 1. Get String Length
+
+```swift
+print(actor.count) // 17
+let nameLength = actor.count
+print(nameLength)  // 17
+```
+
+* `.count` is a **property**, so no parentheses are needed.
+
+### 2. Convert to Uppercase
+
+```swift
+print(result.uppercased())
+```
+
+* `.uppercased()` is a **method** that returns an uppercase version of the string.
+* Note: Some methods in Swift do not require parentheses when called without arguments, but `uppercased()` always requires them.
+
+### 3. Check Prefix
+
+```swift
+print(movie.hasPrefix("A day"))
+```
+
+### 4. Check Suffix
+
+```swift
+print(filename.hasSuffix(".jpg")) // true
+print(filename.hasSuffix(".JPG")) // false (case-sensitive)
+```
+
+## 📝 Notes
+
+* Use `.count` for getting length.
+* Use `.uppercased()` to convert string to uppercase.
+* Use `.hasPrefix()` and `.hasSuffix()` to check string beginnings and endings.
+* Some methods like `isEmpty` can be used without parentheses: `string.isEmpty`.
+* Remember: Strings are case-sensitive.
+
+## 🖚 Summary
+Swift strings are versatile and powerful. Start by mastering these basics:
+
+* Creating and printing strings
+* Using properties like `.count`
+* Using methods like `.uppercased()`, `.hasPrefix()`, and `.hasSuffix()`
+
+This foundation will help you work confidently with text in Swift.
+
+# Swift Integers Basics
+
+## 🧠 Key Concepts
+
+* Whole numbers like 3, 5, 50, or 5\_000\_000 are called **integers** in Swift.
+* Swift uses the `Int` type to represent integers.
+* You can use `let` or `var` to declare integers, just like strings.
+
+```swift
+let score = 10
+```
+
+* Integers can be **positive** or **negative**, and can go up to quintillions.
+
+## 🔢 Readable Numbers
+You can add underscores (`_`) to make large numbers easier to read:
+
+```swift
+let reallyBig = 100_000_000
+let weirdStyle = 1_00__00___00____00 // Still valid!
+```
+
+## ➕ Basic Arithmetic Operations
+You can perform arithmetic with integers using these operators:
+
+```swift
+let lowerScore = score - 2
+let higherScore = score + 10
+let doubledScore = score * 2
+let squaredScore = score * score
+let halvedScore = score / 2
+```
+
+## 🔁 Compound Assignment Operators
+Instead of reassigning manually, use shorthand:
+
+```swift
+var counter = 10
+counter += 5   // Add 5
+counter *= 2   // Multiply by 2
+counter -= 10  // Subtract 10
+counter /= 2   // Divide by 2
+```
+
+## 🔍 Useful Integer Methods
+Use `.isMultiple(of:)` to check for multiples:
+
+```swift
+let number = 120
+print(number.isMultiple(of: 3))
+print(120.isMultiple(of: 3)) // Also works directly
+```
+
+## 🧾 Summary
+
+* Integers are declared with `let` or `var`, and use the `Int` type.
+* Underscores help format large numbers: `1_000_000`
+* Use `+`, `-`, `*`, `/` for arithmetic.
+* Use `+=`, `-=`, `*=`, `/=` for compound updates.
+* Check if a number is a multiple with `.isMultiple(of:)`.
+
+
