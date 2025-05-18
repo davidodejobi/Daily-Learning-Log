@@ -121,15 +121,15 @@ print(playerName)
   - Safer code (fewer unintended changes)
   - Better performance (compiler optimization)
 
-# [Strings in Swift]
-/
-/## 🧠 Key Concepts
-/- A string is a collection of text characters stored in a variable or constant.
-/- Strings are written using double quotes (" ").
-/- You can store and manipulate text using Swift’s powerful built-in string methods.
-/
+# Strings in Swift
+
+## 🧠 Key Concepts
+- A string is a collection of text characters stored in a variable or constant.
+- Strings are written using double quotes (" ").
+- You can store and manipulate text using Swift’s powerful built-in string methods.
+
 /## 🧵 Declaring Strings
-/
+
 swift
 let actor = "Denzel Washington"
 let filename = "paris.jpg"
