@@ -121,70 +121,82 @@ print(playerName)
   - Safer code (fewer unintended changes)
   - Better performance (compiler optimization)
 
-# Strings in Swift
+# Swift Strings Basics
 
 ## 🧠 Key Concepts
-- A string is a collection of text characters stored in a variable or constant.
-- Strings are written using double quotes (" ").
-- You can store and manipulate text using Swift’s powerful built-in string methods.
 
-/## 🧵 Declaring Strings
+* A **string** is a series of characters (letters, punctuation, emoji, etc.).
+* Strings are created using **double quotes**: `"Hello"`.
+* Strings can include escaped double quotes using a **backslash**: `\"`.
+* Swift strings support **multi-line strings** using triple quotes: `"""`.
+* Strings are **case-sensitive**.
 
-swift
+## 🔤 Basic String Syntax
+
+```swift
 let actor = "Denzel Washington"
 let filename = "paris.jpg"
 let result = "⭐️ You win! ⭐️"
-/
-/- You can include special characters, like emoji or punctuation.
-/- To include quotes inside a string, use a backslash (\) before them:
-/
-swift
-let quote = "Then he tapped a sign saying "Believe" and walked away."
-/
-/## 📜 Multi-line Strings
-/- Use triple quotes (""") for multi-line text:
-/
-swift
+let quote = "Then he tapped a sign saying \"Believe\" and walked away."
+```
+
+## 📏 Multi-line Strings
+Use triple quotes for multi-line string literals:
+
+```swift
 let movie = """
 A day in
 the life of an
 Apple engineer
-/"""
-/
-/- Triple quotes must be on their own lines.
-/- Useful for long-form text or structured content (e.g., logs, code snippets).
+"""
+```
 
-/## 🧮 String Length
-/- Use .count to get the number of characters:
-/
-swift
+## 🔧 Useful String Properties and Methods
+
+### 1. Get String Length
+
+```swift
 print(actor.count) // 17
 let nameLength = actor.count
-print(nameLength)
-/
-/## 🔠 Changing Case
-/- Use .uppercased() to return the same string in uppercase:
-/
-swift
-print(result.uppercased()) // "⭐️ YOU WIN! ⭐️"
-/
-/- Parentheses are required because it's a method that performs work.
+print(nameLength)  // 17
+```
 
-/## 🔎 Checking Prefixes and Suffixes
-/- .hasPrefix() checks how a string starts:
-/
-swift
-print(movie.hasPrefix("A day")) // true
-/
-/- .hasSuffix() checks how a string ends:
-/
-swift
+* `.count` is a **property**, so no parentheses are needed.
+
+### 2. Convert to Uppercase
+
+```swift
+print(result.uppercased())
+```
+
+* `.uppercased()` is a **method** that returns an uppercase version of the string.
+
+### 3. Check Prefix
+
+```swift
+print(movie.hasPrefix("A day"))
+```
+
+### 4. Check Suffix
+
+```swift
 print(filename.hasSuffix(".jpg")) // true
-/
-/⚠️ Case-sensitive: "paris.jpg" is different from "paris.JPG"
+print(filename.hasSuffix(".JPG")) // false (case-sensitive)
+```
 
-/## 🧼 Summary
-/- Use let for strings you don't plan to change.
-/- Use triple quotes for multiline strings.
-/- .count, .uppercased(), .hasPrefix(), and .hasSuffix() are powerful tools for string manipulation.
-/- Naming and casing matter—Swift is case-sensitive.
+## 📝 Notes
+
+* Use `.count` for getting length.
+* Use `.uppercased()` to convert string to uppercase.
+* Use `.hasPrefix()` and `.hasSuffix()` to check string beginnings and endings.
+* Remember: Strings are case-sensitive.
+
+## 🔚 Summary
+Swift strings are versatile and powerful. Start by mastering these basics:
+
+* Creating and printing strings
+* Using properties like `.count`
+* Using methods like `.uppercased()`, `.hasPrefix()`, and `.hasSuffix()`
+
+This foundation will help you work confidently with text in Swift.
+
