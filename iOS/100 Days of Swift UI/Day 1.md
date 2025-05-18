@@ -123,7 +123,7 @@ print(playerName)
 
 # Swift Strings Basics
 
-## 🧠 Key Concepts
+## Key Concepts
 
 * A **string** is a series of characters (letters, punctuation, emoji, etc.).
 * Strings are created using **double quotes**: `"Hello"`.
@@ -131,7 +131,7 @@ print(playerName)
 * Swift strings support **multi-line strings** using triple quotes: `"""`.
 * Strings are **case-sensitive**.
 
-## 🔤 Basic String Syntax
+## Basic String Syntax
 
 ```swift
 let actor = "Denzel Washington"
@@ -140,7 +140,7 @@ let result = "⭐️ You win! ⭐️"
 let quote = "Then he tapped a sign saying \"Believe\" and walked away."
 ```
 
-## 📏 Multi-line Strings
+## Multi-line Strings
 Use triple quotes for multi-line string literals:
 
 ```swift
@@ -151,7 +151,7 @@ Apple engineer
 """
 ```
 
-## 🔧 Useful String Properties and Methods
+## Useful String Properties and Methods
 
 ### 1. Get String Length
 
@@ -184,14 +184,14 @@ print(filename.hasSuffix(".jpg")) // true
 print(filename.hasSuffix(".JPG")) // false (case-sensitive)
 ```
 
-## 📝 Notes
+## Notes
 
 * Use `.count` for getting length.
 * Use `.uppercased()` to convert string to uppercase.
 * Use `.hasPrefix()` and `.hasSuffix()` to check string beginnings and endings.
 * Remember: Strings are case-sensitive.
 
-## 🔚 Summary
+## Summary
 Swift strings are versatile and powerful. Start by mastering these basics:
 
 * Creating and printing strings
