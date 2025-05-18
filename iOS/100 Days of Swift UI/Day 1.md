@@ -46,19 +46,21 @@ print(greeting) // ⇒ Hello, Swift!
 
 # Variables and Constants in Swift
 
-## 🧠 Key Concepts
+## Key Concepts
 - **Variables** are used to store values that can change over time.
 - **Constants** are used to store values that never change.
 - Swift encourages the use of **constants (`let`)** whenever possible for safety and performance.
 - Use **`print()`** to view variable values in a playground during development.
 - Swift uses **camelCase** for naming variables and constants.
 
-## 🧪 Variables (`var`)
+## Variables (`var`)
 - Use `var` to declare a variable (i.e., a value that can change).
 
+```swi
 swift
 var greeting = "Hello, playground"
 greeting = "Hi there"
+```
 
 - You can reassign a variable without using `var` again:
 
