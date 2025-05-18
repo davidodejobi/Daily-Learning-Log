@@ -83,7 +83,7 @@ let character = "Daphne"
 ```swift
 let character = "Daphne"
 //character = "Eloise"   // ❌ Error: Cannot assign to value: 'character' is a 'let' constant
-//*/\*character = "Francesca" // ❌ Error: Same here
+//character = "Francesca" // ❌ Error: Same here
 ```
 
 - Always prefer `let` over `var` when you don’t need to change the value.
@@ -91,7 +91,7 @@ let character = "Daphne"
 ## 🖨 Printing Values
 - Use `print()` to inspect the current value of a variable:
 
-swift
+```swift
 var playerName = "Roy"
 print(playerName)
 
@@ -100,6 +100,7 @@ print(playerName)
 
 playerName = "Sam"
 print(playerName)
+```
 
 - This is helpful in **Playgrounds** but not typically used in production apps.
 
