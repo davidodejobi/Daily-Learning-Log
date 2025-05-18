@@ -1,3 +1,28 @@
+### 🧠 TL;DR – *What John Amaechi Teaches Founders About Mastery*
+
+1. **Boredom is a moat**  
+   Winners outlast others by embracing repetition. Pivot drills = startup grunt work (e.g. CRM cleanup, user calls).
+
+2. **Big vision, small steps**  
+   Success starts by vividly picturing your goal *and* ruthlessly asking: *What must I do today to make that real?*
+
+3. **Pay the F.E.E.**
+   - **Focus** – Full attention on the now  
+   - **Effort** – Go all-in for a season  
+   - **Execution** – Quality reps > lots of reps
+
+4. **Get dunked on**  
+   If you’re not failing publicly, you’re playing too small. Resilience is about bouncing *back better*.
+
+5. **Silence the heckler**  
+   That inner critic isn’t you. It’s a mashup of past doubt. Challenge it with logic. It quiets fast.
+
+6. **Success needs a tribe**  
+   You don’t win alone. Build your support cast: challengers, mentors, lifters. They’re your hidden edge.
+
+> ⚡️**Start small**: Do 1 boring but high-leverage task today. Define your FEE Sprint metric. DM someone to join your tribe.
+
+
 ### 🔍 What’s hiding between the lines
 
 | **On-court drills** | **Startup life** |
