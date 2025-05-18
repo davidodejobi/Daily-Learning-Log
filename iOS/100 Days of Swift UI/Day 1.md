@@ -56,18 +56,18 @@ print(greeting) // ⇒ Hello, Swift!
 ## Variables (`var`)
 - Use `var` to declare a variable (i.e., a value that can change).
 
-```swi
-swift
+```swift
 var greeting = "Hello, playground"
 greeting = "Hi there"
 ```
 
 - You can reassign a variable without using `var` again:
 
-swift
+```swift
 var name = "Ted"
 name = "Rebecca"
 name = "Keeley"
+```
 
 - Old values are **discarded** as soon as a new one is assigned.
 
