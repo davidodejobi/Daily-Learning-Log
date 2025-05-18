@@ -170,6 +170,7 @@ print(result.uppercased())
 ```
 
 * `.uppercased()` is a **method** that returns an uppercase version of the string.
+* Note: Some methods in Swift do not require parentheses when called without arguments, but `uppercased()` always requires them.
 
 ### 3. Check Prefix
 
