@@ -71,7 +71,7 @@ name = "Keeley"
 
 - Old values are **discarded** as soon as a new one is assigned.
 
-## 🔒 Constants (`let`)
+## Constants (`let`)
 - Use `let` to declare a constant (i.e., a value that can’t change).
 
 ```swift
@@ -104,19 +104,19 @@ print(playerName)
 
 - This is helpful in **Playgrounds** but not typically used in production apps.
 
-## 🧱 Syntax Breakdown
+## Syntax Breakdown
 1. `var` or `let` — keyword to declare variable or constant.
 2. `name` — your identifier, can be anything but should be descriptive.
 3. `=` — assignment operator.
 4. `"value"` — the assigned value, enclosed in double quotes for strings.
 
-## 💡 Tips
+## Tips
 - Swift does **not require semicolons** at the end of lines.
 - Use **camelCase** for naming: `playerName`, `dogBreed`, `meaningOfLife`.
 - Always use the same name consistently; `playerName` and `playername` are different in Swift.
 - The `import Cocoa` statement in macOS Playgrounds gives access to Apple’s UI frameworks (important—don’t delete it).
 
-## 🧼 Best Practice
+## Best Practice
 - Prefer `let` over `var` unless you **know** you need to change the value later. This leads to:
   - Safer code (fewer unintended changes)
   - Better performance (compiler optimization)
