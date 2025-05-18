@@ -1,8 +1,10 @@
-🔍 What’s hiding between the lines
-On-court drills	Startup life
-30 minutes of one-step pivots sharpen footwork no fan ever notices	Hundreds of micro-iterations on copy, funnels and ops that users never see
-NBA veterans “pay the FEE” (Focus-Effort-Execution) on the tiniest mechanics	Founders do the same with metrics, user calls and culture rituals
-Getting dunked on by Jordan is inevitable at the rim	Getting outsold or shipping a flop is inevitable in markets
+### 🔍 What’s hiding between the lines
+
+| **On-court drills** | **Startup life** |
+|---------------------|------------------|
+| **30 minutes of one-step pivots** sharpen footwork no fan ever notices | **Hundreds of micro-iterations** on copy, funnels and ops that users never see |
+| **NBA veterans “pay the FEE”** (Focus–Effort–Execution) on the tiniest mechanics | **Founders do the same** with metrics, user calls and culture rituals |
+| **Getting dunked on by Jordan** is inevitable at the rim | **Getting outsold or shipping a flop** is inevitable in markets |
 
 John Amaechi’s talk isn’t really about sport; it’s a blueprint for compounding tiny, “un-sexy” behaviours until they break through in public.
 
