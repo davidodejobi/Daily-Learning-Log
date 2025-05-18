@@ -121,5 +121,3 @@ print(playerName)
   - Safer code (fewer unintended changes)
   - Better performance (compiler optimization)
 
-This gives you the foundation to store and manage data in Swift efficiently.
-
