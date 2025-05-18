@@ -274,7 +274,7 @@ print(filename.hasSuffix(".jpg")) // true
 print(filename.hasSuffix(".JPG")) // false (case-sensitive)
 ```
 
-## 📝 Notes
+## Notes
 
 * Use `.count` for getting length.
 * Use `.uppercased()` to convert string to uppercase.
@@ -282,7 +282,7 @@ print(filename.hasSuffix(".JPG")) // false (case-sensitive)
 * Some methods like `isEmpty` can be used without parentheses: `string.isEmpty`.
 * Remember: Strings are case-sensitive.
 
-## 🖚 Summary
+## Summary
 Swift strings are versatile and powerful. Start by mastering these basics:
 
 * Creating and printing strings
@@ -296,7 +296,7 @@ This foundation will help you work confidently with text in Swift.
 
 # Swift Integers Basics
 
-## 🧠 Key Concepts
+## Key Concepts
 
 * Whole numbers like 3, 5, 50, or 5\_000\_000 are called **integers** in Swift.
 * Swift uses the `Int` type to represent integers.
@@ -308,7 +308,7 @@ let score = 10
 
 * Integers can be **positive** or **negative**, and can go up to quintillions.
 
-## 🔢 Readable Numbers
+## Readable Numbers
 You can add underscores (`_`) to make large numbers easier to read:
 
 ```swift
@@ -316,7 +316,7 @@ let reallyBig = 100_000_000
 let weirdStyle = 1_00__00___00____00 // Still valid!
 ```
 
-## ➕ Basic Arithmetic Operations
+## Basic Arithmetic Operations
 You can perform arithmetic with integers using these operators:
 
 ```swift
@@ -327,7 +327,7 @@ let squaredScore = score * score
 let halvedScore = score / 2
 ```
 
-## 🔁 Compound Assignment Operators
+## Compound Assignment Operators
 Instead of reassigning manually, use shorthand:
 
 ```swift
@@ -338,7 +338,7 @@ counter -= 10  // Subtract 10
 counter /= 2   // Divide by 2
 ```
 
-## 🔍 Useful Integer Methods
+## Useful Integer Methods
 Use `.isMultiple(of:)` to check for multiples:
 
 ```swift
@@ -347,7 +347,7 @@ print(number.isMultiple(of: 3))
 print(120.isMultiple(of: 3)) // Also works directly
 ```
 
-## 🧾 Summary
+## Summary
 
 * Integers are declared with `let` or `var`, and use the `Int` type.
 * Underscores help format large numbers: `1_000_000`
@@ -360,7 +360,7 @@ print(120.isMultiple(of: 3)) // Also works directly
 
 # Swift Floating-Point Numbers Basics
 
-## 🧠 Key Concepts
+## Key Concepts
 
 * Numbers with a decimal point like `3.1`, `5.56`, or `3.141592654` are called **floating-point numbers** in Swift.
 * Swift uses the `Double` type by default for decimal numbers ("double-precision floating-point").
@@ -372,7 +372,7 @@ let number = 0.1 + 0.2
 print(number) // Output: 0.30000000000000004
 ```
 
-## 🔣 Type Safety Between Int and Double
+## Type Safety Between Int and Double
 
 * Swift treats `Int` and `Double` as **different types**.
 * You can't directly mix them in operations:
@@ -401,7 +401,7 @@ let double3 = 3.0 // Still Double
 let int1 = 3      // Int
 ```
 
-## 🔁 Reassigning Variables and Type Consistency
+## Reassigning Variables and Type Consistency
 
 * Once Swift infers a type, you must keep using that type:
 
@@ -420,18 +420,18 @@ var rating = 5.0
 rating *= 2  // rating is now 10.0
 ```
 
-## 🧱 CGFloat
+## CGFloat
 
 * Some older APIs (especially in UIKit) use `CGFloat` for decimal values.
 * Swift lets you use `Double` anywhere `CGFloat` is expected, so conversions are automatic in most cases.
 
-## ⚠️ Why Floating-Point is Inexact
+## Why Floating-Point is Inexact
 
 * Computers store numbers in **binary**, so some decimals can’t be perfectly represented.
 * Example: `1 / 3` equals `0.333…`, which is repeating and cannot be stored precisely.
 * These small inaccuracies are usually harmless but explain why Swift enforces **strict type safety**.
 
-## ✅ Summary
+## Summary
 
 * Decimal numbers use the `Double` type in Swift.
 * You can't mix `Int` and `Double` without explicit conversion.
