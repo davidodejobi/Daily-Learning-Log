@@ -44,6 +44,10 @@ print(greeting) // ⇒ Hello, Swift!
 
 🧠 **Best Practice:** Reading is not enough—**run the code, break it, and learn by doing**!
 
+
+---
+
+
 # Variables and Constants in Swift
 
 ## Key Concepts
@@ -120,6 +124,8 @@ print(playerName)
 - Prefer `let` over `var` unless you **know** you need to change the value later. This leads to:
   - Safer code (fewer unintended changes)
   - Better performance (compiler optimization)
+
+---
 
 # Swift Strings Basics
 
@@ -201,9 +207,10 @@ Swift strings are versatile and powerful. Start by mastering these basics:
 
 This foundation will help you work confidently with text in Swift.
 
+
 ---
 
-"# Swift Strings Basics
+# Swift Strings Basics
 
 ## 🧠 Key Concepts
 
@@ -283,6 +290,9 @@ Swift strings are versatile and powerful. Start by mastering these basics:
 * Using methods like `.uppercased()`, `.hasPrefix()`, and `.hasSuffix()`
 
 This foundation will help you work confidently with text in Swift.
+
+
+---
 
 # Swift Integers Basics
 
