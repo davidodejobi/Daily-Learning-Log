@@ -1,3 +1,4 @@
+Video link: https://www.youtube.com/watch?v=KYs3M_qB6hs
 ### 🧠 TL;DR – *What John Amaechi Teaches Founders About Mastery*
 
 1. **Boredom is a moat**  
