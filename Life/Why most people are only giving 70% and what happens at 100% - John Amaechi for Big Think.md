@@ -22,7 +22,7 @@
 
 > ⚡️**Start small**: Do 1 boring but high-leverage task today. Define your FEE Sprint metric. DM someone to join your tribe.
 
-
+---
 ### 🔍 What’s hiding between the lines
 
 | **On-court drills** | **Startup life** |
