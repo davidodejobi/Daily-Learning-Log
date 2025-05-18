@@ -390,7 +390,7 @@ let c = a + Int(b)       // Convert Double to Int
 let c2 = Double(a) + b   // Convert Int to Double
 ```
 
-## 📌 Swift's Type Inference
+## Swift's Type Inference
 
 * If a number has a dot (`.`), Swift assumes it’s a `Double`:
 
