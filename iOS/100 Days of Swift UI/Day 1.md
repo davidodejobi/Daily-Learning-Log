@@ -36,28 +36,6 @@ print(greeting) // ⇒ Hello, Swift!
   - [SwiftFiddle](https://swiftfiddle.com)
   - [Replit](https://replit.com)
 - Great for small tests and quick practice.
-```swift
-print("Hello from the browser!")
-```
-
-### 🐧 3. Swift on Linux / WSL (Advanced)
-```bash
-# Ubuntu example setup:
-sudo apt update
-sudo apt install curl clang libicu-dev
-curl -O https://download.swift.org/swift-5.10-release/ubuntu22.04/swift-5.10-RELEASE-ubuntu22.04.tar.gz
-tar -xzf swift-5.10-RELEASE-ubuntu22.04.tar.gz
-export PATH="$PWD/swift-5.10-RELEASE-ubuntu22.04/usr/bin:$PATH"
-swift --version
-```
-Run code with:
-```bash
-swift Hello.swift
-swiftc Hello.swift && ./Hello
-```
-- Use with VS Code (with Swift plugin) or terminal editors like `vim`, `nano`.
-
-> 💡 **Windows users**: Use **WSL2 + Ubuntu**, or try **GitHub Codespaces** with a Swift container.
 
 ## ✅ Checklist
 - [ ] Code runs and prints the correct output.
