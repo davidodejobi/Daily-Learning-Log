@@ -74,15 +74,17 @@ name = "Keeley"
 ## 🔒 Constants (`let`)
 - Use `let` to declare a constant (i.e., a value that can’t change).
 
-swift
+```swift
 let character = "Daphne"
+```
 
 - Trying to change a constant will cause a **compiler error**:
 
-swift
-\let character = "Daphne"
+```swift
+let character = "Daphne"
 //character = "Eloise"   // ❌ Error: Cannot assign to value: 'character' is a 'let' constant
 //*/\*character = "Francesca" // ❌ Error: Same here
+```
 
 - Always prefer `let` over `var` when you don’t need to change the value.
 
