@@ -355,4 +355,86 @@ print(120.isMultiple(of: 3)) // Also works directly
 * Use `+=`, `-=`, `*=`, `/=` for compound updates.
 * Check if a number is a multiple with `.isMultiple(of:)`.
 
+---
+
+
+# Swift Floating-Point Numbers Basics
+
+## 🧠 Key Concepts
+
+* Numbers with a decimal point like `3.1`, `5.56`, or `3.141592654` are called **floating-point numbers** in Swift.
+* Swift uses the `Double` type by default for decimal numbers ("double-precision floating-point").
+* These numbers are stored in a format that allows for very large or very small values by **"floating" the decimal point**.
+* Floating-point math is **not always exact** because binary cannot precisely represent some decimals.
+
+```swift
+let number = 0.1 + 0.2
+print(number) // Output: 0.30000000000000004
+```
+
+## 🔣 Type Safety Between Int and Double
+
+* Swift treats `Int` and `Double` as **different types**.
+* You can't directly mix them in operations:
+
+```swift
+let a = 1
+let b = 2.0
+let c = a + b // Error: Cannot add Int and Double
+```
+
+To fix it, convert one to match the other:
+
+```swift
+let c = a + Int(b)       // Convert Double to Int
+let c2 = Double(a) + b   // Convert Int to Double
+```
+
+## 📌 Swift's Type Inference
+
+* If a number has a dot (`.`), Swift assumes it’s a `Double`:
+
+```swift
+let double1 = 3.1
+let double2 = 3131.3131
+let double3 = 3.0 // Still Double
+let int1 = 3      // Int
+```
+
+## 🔁 Reassigning Variables and Type Consistency
+
+* Once Swift infers a type, you must keep using that type:
+
+```swift
+var name = "Nicolas Cage"
+name = "John Travolta" // OK
+name = 57              // Error: type mismatch
+```
+
+## ➕ Arithmetic with Doubles
+
+* You can use all arithmetic and compound operators just like with `Int`:
+
+```swift
+var rating = 5.0
+rating *= 2  // rating is now 10.0
+```
+
+## 🧱 CGFloat
+
+* Some older APIs (especially in UIKit) use `CGFloat` for decimal values.
+* Swift lets you use `Double` anywhere `CGFloat` is expected, so conversions are automatic in most cases.
+
+## ⚠️ Why Floating-Point is Inexact
+
+* Computers store numbers in **binary**, so some decimals can’t be perfectly represented.
+* Example: `1 / 3` equals `0.333…`, which is repeating and cannot be stored precisely.
+* These small inaccuracies are usually harmless but explain why Swift enforces **strict type safety**.
+
+## ✅ Summary
+
+* Decimal numbers use the `Double` type in Swift.
+* You can't mix `Int` and `Double` without explicit conversion.
+* Use arithmetic operators like `+`, `-`, `*`, `/` just like with integers.
+* Floating-point precision errors are normal in computing and stem from binary representation limitations.
 
