@@ -106,7 +106,3 @@ Selection was **not** based on known probabilities.
 2. How did stratified and cluster sampling differ in this session?
 3. What were the potential risks of convenience sampling?
 4. How could representative sampling be ensured in a large-scale survey?
-
----
-
-**Next Steps:** Review the sampling methods covered and consider which technique best fit various research scenarios.
