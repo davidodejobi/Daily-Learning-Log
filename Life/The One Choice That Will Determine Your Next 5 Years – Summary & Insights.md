@@ -1,3 +1,4 @@
+Video link: https://www.youtube.com/watch?v=xVJ9IMoN39U
 ## TL;DR
 
 * **Single leverage point**: Claim the first uninterrupted hour after waking (the “5 AM window”) to compound focus and intentionality.
