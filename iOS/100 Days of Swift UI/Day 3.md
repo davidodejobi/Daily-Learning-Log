@@ -231,3 +231,81 @@ archEnemies.removeAll()
 * Provide default values to safely handle missing keys.
 * You can store different types in dictionaries (e.g., Int, Bool).
 * Useful methods: \`.count
+
+---
+
+# Swift Sets Basics
+
+## 🔹 What is a Set?
+
+* A **set** is a collection of **unique** items.
+* Sets do **not preserve order** and **do not allow duplicates**.
+* Sets are optimized for **fast membership checks** (e.g., `contains`).
+
+## 🛠 Creating Sets
+
+### From an array-like list:
+
+```swift
+let people = Set(["Denzel Washington", "Tom Cruise", "Nicolas Cage", "Samuel L Jackson"])
+```
+
+* Duplicate values are automatically removed.
+* The order is not preserved.
+
+### Empty set with explicit type:
+
+```swift
+var people = Set<String>()
+people.insert("Denzel Washington")
+people.insert("Tom Cruise")
+people.insert("Nicolas Cage")
+people.insert("Samuel L Jackson")
+```
+
+* Use `.insert()` instead of `.append()` because sets don’t have a specific order.
+
+## ⚡ Why Use Sets Over Arrays?
+
+### ✅ No Duplicates
+
+* Perfect when you **require uniqueness**, e.g., usernames, member IDs, etc.
+
+### ✅ Performance
+
+* `contains()` in arrays: **O(n)** – checks each item one by one.
+* `contains()` in sets: **O(1)** – checks instantly using a hash.
+
+```swift
+let moviesArray = ["Inception", "Titanic", "Avatar", "The Dark Knight"]
+print(moviesArray.contains("The Dark Knight")) // Slower in large arrays
+
+let moviesSet: Set = ["Inception", "Titanic", "Avatar", "The Dark Knight"]
+print(moviesSet.contains("The Dark Knight")) // Fast even with millions of items
+```
+
+## 🔍 Useful Set Methods
+
+* `contains(item)` – Check for existence
+* `count` – Total items in the set
+* `sorted()` – Returns a sorted array
+
+```swift
+print(people.contains("Tom Cruise"))
+print(people.count)
+print(people.sorted()) // Returns ["Denzel Washington", ...] in alphabetical order
+```
+
+## 🧾 Summary
+
+* Sets store **unique**, unordered values.
+* Use `Set<Type>()` to declare an empty set.
+* Use `.insert()` to add new items.
+* Use sets when:
+
+  * You need to **ensure no duplicates**.
+  * You need to **check existence quickly**.
+  * You don’t care about item **order**.
+* Common methods: `contains()`, `count`, `sorted()`
+
+Sets aren’t always the right choice, but for the right tasks, they outperform arrays significantly.
