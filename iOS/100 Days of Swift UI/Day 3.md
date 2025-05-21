@@ -309,3 +309,81 @@ print(people.sorted()) // Returns ["Denzel Washington", ...] in alphabetical ord
 * Common methods: `contains()`, `count`, `sorted()`
 
 Sets aren’t always the right choice, but for the right tasks, they outperform arrays significantly.
+
+---
+
+# Swift Enums Basics
+
+## 📘 What is an Enum?
+
+* An **enum** (short for enumeration) defines a group of related values.
+* You use it when a variable should only accept a **predefined set of values**.
+* Enums make your code **safer, more efficient, and easier to manage** than using raw strings or numbers.
+
+## ⚠️ Problem With Using Strings
+
+```swift
+var selected = "Monday"
+selected = "Tuesday"
+selected = "January"  // ❌ Invalid but compiles
+selected = "Friday "   // ❌ Has a space; not equal to "Friday"
+```
+
+Using strings can lead to typos, incorrect values, and inefficiency.
+
+## ✅ Defining an Enum
+
+```swift
+enum Weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+}
+```
+
+* Now only these five values are allowed.
+
+## 🔁 Using Enums
+
+```swift
+var day = Weekday.monday
+day = Weekday.tuesday
+```
+
+* Swift provides **autocomplete** and prevents invalid values.
+
+## 📝 Simplified Enum Syntax
+
+### Multiple cases on one line:
+
+```swift
+enum Weekday {
+    case monday, tuesday, wednesday, thursday, friday
+}
+```
+
+### Omit enum name after first assignment:
+
+```swift
+var day = Weekday.monday
+
+// These are automatically inferred as Weekday values
+day = .tuesday
+day = .friday
+```
+
+## ⚡ Performance Benefits
+
+* Swift stores enums efficiently, often as simple integers under the hood.
+* Example: `Weekday.monday` might be stored as `0`, `tuesday` as `1`, etc.
+
+## ✅ Summary
+
+* Use enums to define a **fixed list of related values**.
+* Prevents bugs caused by invalid or misspelled strings.
+* Syntax is clean, especially with dot notation and grouped cases.
+* Swift stores them efficiently, making them faster and more memory-friendly.
+
+Enums are perfect when you need a variable that must be limited to a small, specific group of values.
