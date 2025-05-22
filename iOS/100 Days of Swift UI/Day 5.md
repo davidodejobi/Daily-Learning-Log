@@ -360,3 +360,97 @@ default:
 * Use `default` when you can't list all possible values.
 * Use `fallthrough` **sparingly** – only when necessary.
 * Improves code clarity, safety, and correctness over chained `if-else if` statements.
+
+---
+
+# Swift Ternary Conditional Operator
+
+## ❓ What Is the Ternary Operator?
+
+* The **ternary conditional operator** evaluates a condition and returns one of two values.
+* Syntax: `condition ? valueIfTrue : valueIfFalse`
+* Called "ternary" because it works with **three** inputs: condition, true value, false value.
+
+## 🧠 WTF Mnemonic
+
+* **W** – What is the condition?
+* **T** – Value when condition is true
+* **F** – Value when condition is false
+
+## ✍️ Basic Example
+
+```swift
+let age = 18
+let canVote = age >= 18 ? "Yes" : "No"
+print(canVote) // Yes
+```
+
+## 🕛 Time Check Example
+
+```swift
+let hour = 23
+print(hour < 12 ? "It's before noon" : "It's after noon")
+```
+
+## 🧑‍🚀 Array Count Example
+
+```swift
+let names = ["Jayne", "Kaylee", "Mal"]
+let crewCount = names.isEmpty ? "No one" : "\(names.count) people"
+print(crewCount) // 3 people
+```
+
+## 🎨 Enum Style Theme Example
+
+```swift
+enum Theme {
+    case light, dark
+}
+
+let theme = Theme.dark
+let background = theme == .dark ? "black" : "white"
+print(background) // black
+```
+
+* Break it down:
+
+  * **What?** `theme == .dark`
+  * **True:** "black"
+  * **False:** "white"
+
+## ⚠️ Why Use It?
+
+* More compact than `if`/`else` for quick, single-line logic.
+* Especially important in **SwiftUI** where view declarations often need a single expression.
+
+### Invalid `if` Usage in a Function Call
+
+```swift
+// This won’t compile:
+print(
+    if hour < 12 {
+        "It's before noon"
+    } else {
+        "It's after noon"
+    }
+)
+```
+
+### Correct Alternative with `if`/`else`
+
+```swift
+if hour < 12 {
+    print("It's before noon")
+} else {
+    print("It's after noon")
+}
+```
+
+* Verbose and can't be used inline where an expression is required.
+
+## ✅ Summary
+
+* Ternary operator: `condition ? trueValue : falseValue`
+* Useful for **inline value selection**.
+* Compact alternative to `if`/`else`, often required in SwiftUI.
+* Not always easier to read, so use judiciously when appropriate.
