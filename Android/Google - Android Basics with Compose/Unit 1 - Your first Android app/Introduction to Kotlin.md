@@ -307,3 +307,15 @@ fun main() {
 ```
 
 </details>
+
+## Learn More
+
+- Hello World[https://play.kotlinlang.org/byExample/01_introduction/01_Hello%20world]
+- Program entry point
+- Print to the standard output
+- Basic syntax of functions
+- Keywords and operators
+- Functions Concept
+- println()
+- Kotlin style guide
+
