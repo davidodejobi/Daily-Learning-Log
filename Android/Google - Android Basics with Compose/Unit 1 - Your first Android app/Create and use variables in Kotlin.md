@@ -1,0 +1,132 @@
+# Kotlin Variables & Data Types
+
+> **Source** – [Android basics in Kotlin: Variables](https://developer.android.com/codelabs/basic-android-kotlin-compose-variables)
+> This doc distills the official codelab into crisp, beginner‑friendly notes, including extra explanations and quick‑fire checks.
+
+---
+
+## 📐  Core Objectives
+
+1. **Declare** variables with `val` (read‑only) and `var` (mutable).
+2. **Choose** correct basic data types: `String`, `Int`, `Double`, `Boolean`.
+3. **Update** values and use increment `++` / decrement `--`.
+4. **Embed** variables in strings with templates `$variable` and `${expression}`.
+5. **Apply** Google Kotlin style: naming, spacing, comments.
+
+---
+
+## 1  Why Use Variables?
+
+* Apps need to reflect real‑time data (user names, counts, distances…).
+* Variables *decouple* code from fixed values → one code path supports many scenarios.
+
+### Analogy
+
+| Code Concept | Everyday Parallel                          |
+| ------------ | ------------------------------------------ |
+| Variable box | Blank in a letter template                 |
+| Value        | Actual name/date filled in                 |
+| Data type    | "Only numbers here", "only text here" rule |
+
+---
+
+## 2  Declaring Variables
+
+```kotlin
+val pizzaSlices: Int = 8   // read‑only constant
+var slicesLeft = 8        // mutable; type inferred as Int
+```
+
+* **Syntax**: `val|var name: Type = initialValue`
+* Omit `: Type` when an initial value is supplied (type inference).
+
+### `val` vs `var`
+
+| Keyword | Mutability | When to use                 |
+| ------- | ---------- | --------------------------- |
+| `val`   | Immutable  | IDs, config, constants      |
+| `var`   | Mutable    | Counters, UI state, toggles |
+
+---
+
+## 3  Basic Data Types
+
+| Type      | Example Values  | Notes                    |
+| --------- | --------------- | ------------------------ |
+| `String`  | "Kotlin", "Hi"  | Text; wrap in quotes     |
+| `Int`     | `42`, `-7`      | Whole numbers            |
+| `Double`  | `3.14`, `2.0`   | Decimals, high precision |
+| `Boolean` | `true`, `false` | Exactly two states       |
+
+### Operations
+
+```kotlin
+val distance = 3.2 + 4.1   // Double addition → 7.3
+val greeting = "Hi, " + name  // String concat
+count++   // Int increment by 1
+```
+
+---
+
+## 4  String Templates
+
+* Inline a variable: `"You have $count messages"`
+* Inline an expression: `"Total: ${a + b}"`
+
+```kotlin
+println("You have $unreadCount unread")
+println("Total: ${prices.sum()}")
+```
+
+---
+
+## 5  Coding Conventions
+
+* **Camel case** for variable & function names: `userName`, `calculateTotal()`
+* **Spaces** around operators: `val sum = a + b`
+* **100‑char line limit** for readability.
+* **4‑space indent**, no tabs.
+
+---
+
+## 6  Comments
+
+```kotlin
+// Single‑line comment
+/*
+ * Multi‑line comment for
+ * longer explanations.
+ */
+```
+
+---
+
+## 7  Quick‑Fire Practice
+
+1. **Fix the bug** – What’s wrong?
+
+   ```kotlin
+   val name = "Alex
+   println("Hi $name!")
+   ```
+2. **Distance calculator** – Combine three `Double` legs into one total.
+3. **Inbox** – Start with `var unread = 5`; print message, decrement to simulate reading.
+
+*(Answers hidden—try first, then scroll to reveal in the codelab.)*
+
+---
+
+## 8  Key Takeaways
+
+* Choose `val` by default; switch to `var` only when state must change.
+* Let Kotlin infer types to reduce clutter.
+* Use string templates instead of concatenation for readability.
+* Follow style guide to collaborate smoothly.
+
+---
+
+### Further Reading
+
+* Official *Kotlin Basic Types* doc
+* *Kotlin Style Guide* — Google Android
+* *String Templates* reference
