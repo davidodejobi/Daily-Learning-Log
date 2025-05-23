@@ -310,12 +310,12 @@ fun main() {
 
 ## Learn More
 
-- Hello World[https://play.kotlinlang.org/byExample/01_introduction/01_Hello%20world]
-- Program entry point
-- Print to the standard output
-- Basic syntax of functions
-- Keywords and operators
-- Functions Concept
-- println()
-- Kotlin style guide
+- [Hello World](https://play.kotlinlang.org/byExample/01_introduction/01_Hello%20world)
+- [Program entry point](https://kotlinlang.org/docs/basic-syntax.html#program-entry-point)
+- [Print to the standard output](https://kotlinlang.org/docs/basic-syntax.html#print-to-the-standard-output)
+- [Basic syntax of functions](https://kotlinlang.org/docs/basic-syntax.html#functions)
+- [Keywords and operators](https://kotlinlang.org/docs/keyword-reference.html)
+- [Functions Concept](https://kotlinlang.org/docs/functions.html)
+- [println](https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.io/println.html)
+- [Kotlin style guide](https://developer.android.com/kotlin/style-guide)
 
