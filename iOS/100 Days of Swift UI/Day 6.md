@@ -125,3 +125,76 @@ print(lyric)
 * Use `...` to include the upper bound, `..<` to exclude it.
 * Replace unused loop variables with `_`.
 * Combine loops for more complex operations.
+
+---
+
+# Swift `while` Loops
+
+## 🔁 What Is a `while` Loop?
+
+* Executes code **as long as a condition is true**.
+* Less common than `for` loops but useful when the number of iterations isn't known beforehand.
+
+---
+
+## 🧮 Basic `while` Loop Example
+
+```swift
+var countdown = 10
+
+while countdown > 0 {
+    print("\(countdown)…")
+    countdown -= 1
+}
+
+print("Blast off!")
+```
+
+* Starts from 10 and decrements down to 0.
+* The loop stops when the condition `countdown > 0` becomes false.
+
+---
+
+## 🎲 Using `random(in:)` with `while`
+
+### Generate Random Numbers
+
+```swift
+let id = Int.random(in: 1...1000)
+let amount = Double.random(in: 0...1)
+```
+
+### Critical Hit Dice Rolling Example
+
+```swift
+var roll = 0
+
+while roll != 20 {
+    roll = Int.random(in: 1...20)
+    print("I rolled a \(roll)")
+}
+
+print("Critical hit!")
+```
+
+* This continues until a 20 is rolled.
+* `random(in:)` is useful for generating random values.
+
+---
+
+## 🆚 `for` vs `while`
+
+| Feature     | `for` Loop                  | `while` Loop                      |
+| ----------- | --------------------------- | --------------------------------- |
+| Usage       | Known number of iterations  | Unknown number of iterations      |
+| Best For    | Arrays, ranges, collections | Loops with custom exit conditions |
+| Readability | Clear for fixed loops       | More flexible, less structured    |
+
+---
+
+## ✅ Summary
+
+* Use `while` when the loop length depends on a condition, not a count.
+* Loop continues **until the condition becomes false**.
+* Great for working with randomness, user input, or continuous tasks.
+* Prefer `for` when iterating over known collections or ranges.
