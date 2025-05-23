@@ -198,3 +198,78 @@ print("Critical hit!")
 * Loop continues **until the condition becomes false**.
 * Great for working with randomness, user input, or continuous tasks.
 * Prefer `for` when iterating over known collections or ranges.
+
+---
+
+# Swift Loop Control: `continue` and `break`
+
+Swift provides two key ways to control loop execution:
+
+* `continue`: skips the **current** iteration.
+* `break`: exits the **entire** loop immediately.
+
+---
+
+## 🔁 Using `continue`
+
+* Use `continue` to **skip over** items that don’t meet a condition.
+
+### Example
+
+```swift
+let filenames = ["me.jpg", "work.txt", "sophie.jpg", "logo.psd"]
+
+for filename in filenames {
+    if !filename.hasSuffix(".jpg") {
+        continue
+    }
+    print("Found picture: \(filename)")
+}
+```
+
+* If the filename doesn’t end with `.jpg`, it skips the print statement.
+* Only `.jpg` files get printed.
+
+---
+
+## 🛑 Using `break`
+
+* Use `break` to **terminate** the entire loop early.
+
+### Example
+
+```swift
+let number1 = 4
+let number2 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+
+print(multiples)
+```
+
+* Appends common multiples of 4 and 14.
+* Once 10 are found, it stops checking further numbers.
+
+---
+
+## 🔄 Summary
+
+| Statement  | Behavior                                 |
+| ---------- | ---------------------------------------- |
+| `continue` | Skips the current iteration and moves on |
+| `break`    | Exits the loop immediately               |
+
+* Use `continue` when **some items should be ignored**.
+* Use `break` when **you want to stop looping altogether**.
+* Especially useful when optimizing for performance or readability in loops.
+
+These keywords are especially helpful in filtering or early exit scenarios.
