@@ -1,80 +1,4 @@
-# Introduction to Philosophy – Study Notes
-
-## 1. Why Study Philosophy?
-
-* Understand foundational questions about existence, knowledge, ethics, and beauty.
-* Develop critical thinking, logical reasoning, and clear communication skills.
-* Appreciate the historical development of ideas shaping science, politics, and culture.
-
-## 2. What Is Philosophy?
-
-Philosophy comes from the Greek **philo‑sophia** – “love of wisdom.”
-**Working definition:** a systematic, critical inquiry into the deepest questions about reality, knowledge, value, and meaning, guided by rigorous reasoning.
-
-Philosophy is **not**:
-
-* Mere personal opinion.
-* Purely abstract speculation without practical value.
-* Limited to any single culture or era.
-
-## 3. Key Features of Philosophical Inquiry
-
-| Feature       | Description                                             |
-| ------------- | ------------------------------------------------------- |
-| Critical      | Questions assumptions and seeks well‑justified beliefs. |
-| Systematic    | Follows ordered methods and builds coherent arguments.  |
-| Comprehensive | Addresses every domain of human experience.             |
-| Dynamic       | Evolves with new challenges and discoveries.            |
-
-## 4. Core Questions Explored in Philosophy
-
-1. **Metaphysics:** What is ultimately real?
-2. **Epistemology:** How do we know anything?
-3. **Ethics:** What should we do, and why?
-4. **Aesthetics:** What is beauty and artistic value?
-5. **Logic:** How should we reason correctly?
-6. **Political Philosophy:** What makes a society just?
-
-## 5. Methods of Philosophy
-
-* **Logic:** Tools for valid reasoning and identifying fallacies.
-* **Conceptual Analysis:** Clarifying meanings of key terms and ideas.
-* **Thought Experiments:** Testing intuitions via hypothetical scenarios.
-* **Argumentation:** Presenting premises that lead logically to conclusions.
-* **Dialectic:** Refining positions through constructive critique.
-
-## 6. Common Misconceptions
-
-| Misconception                           | Reality                                                       |
-| --------------------------------------- | ------------------------------------------------------------- |
-| Philosophy is abstract and impractical. | It underpins science, law, and everyday decision‑making.      |
-| Philosophers never reach conclusions.   | They build and refine arguments that guide many fields.       |
-| A personal motto equals a philosophy.   | Genuine philosophy demands systematic reasoning and evidence. |
-
----
-
-# Week 1 – Philosophy and Other Disciplines
-
-> How philosophical tools enrich Law, Education, Psychology, and Science.
-
-### Learning Objectives
-
-* Describe philosophy’s interdisciplinary nature.
-* Explain concrete contributions to specific fields.
-
-### Integral Roles
-
-| Discipline     | Key Philosophical Contribution          | Illustrative Example                                          |
-| -------------- | --------------------------------------- | ------------------------------------------------------------- |
-| **Law**        | Concepts of justice, rights, obligation | Rawls’ veil of ignorance shapes constitutional debates        |
-| **Education**  | Theories of knowledge & learning        | Dewey’s experiential learning informs project‑based curricula |
-| **Psychology** | Mind–body problem, free‑will debate     | Dualism vs. physicalism in consciousness studies              |
-| **Science**    | Philosophy of science & ethics          | Popper’s falsifiability guides hypothesis testing             |
-
-*(See discussion prompts in the canvas for practice.)*
-
----
-
+# Branches of Philosophy
 # Week 2 – The Five Major Branches of Philosophy
 
 ## Learning Objectives
@@ -168,7 +92,3 @@ Philosophy is **not**:
 ## Ongoing Reflection Journal
 
 > After each lecture, jot a 3‑sentence reflection: *What challenged me? What resonated? How does this connect to my field of study?*
-
-## Next Module Preview
-
-The next class introduces **Pre‑Socratic & Classical Greek philosophers**, tracing how early thinkers set the stage for systematic philosophy.
