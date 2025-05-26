@@ -67,9 +67,3 @@
 
 * Philosophy’s interdisciplinary reach enriches law, education, psychology, and science through critical scrutiny, ethical guidance, and methodological rigor.
 * Engaging philosophical perspectives enables deeper, more responsible scholarship in every field.
-
----
-
-## Next Module Preview
-
-The upcoming lesson will dive into the **major branches of philosophy**—Metaphysics, Epistemology, Ethics, Logic, Aesthetics, and Political Philosophy—highlighting classic thinkers (Plato, Aristotle, Descartes, Kant) and contemporary voices.
