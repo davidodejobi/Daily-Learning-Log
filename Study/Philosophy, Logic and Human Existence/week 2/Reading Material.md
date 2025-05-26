@@ -123,9 +123,3 @@ Philosophical theories are organised systems of thought that philosophers develo
 
 * J. I. Omoregbe, *Knowing Philosophy: A General Introduction* (2011).
 * R. H. Popkin, *Philosophy Made Simple* (1993).
-
----
-
-## Next Steps
-
-In Week 3 we turn to **Pre‑Socratic natural philosophers** and the transition to systematic thought under **Socrates, Plato,** and **Aristotle**.
