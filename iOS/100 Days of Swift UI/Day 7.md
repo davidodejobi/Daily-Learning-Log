@@ -98,6 +98,19 @@ print(c)  // 5.0
 
 * Calculates the hypotenuse using Pythagoras' theorem.
 * `sqrt()` returns the square root.
+* **Important:** This single-line version only works if that line returns the promised value. Multi-line functions need explicit `return` statements.
+
+### Expanded Example with Explicit Return
+
+```swift
+func pythagoras(a: Double, b: Double) -> Double {
+    let input = a * a + b * b
+    let root = sqrt(input)
+    return root
+}
+```
+
+* Both versions are valid. The single-line version works when the whole line returns the result.
 
 ## 🚨 Early Return
 
@@ -124,6 +137,7 @@ func checkNumber(_ number: Int) {
 * Data created inside a function **does not persist** outside.
 * Functions make code **reusable** and **maintainable**.
 * Functions can return values using `->` and `return`.
+* **Single-line functions can omit `return`** if that line returns the result.
 * **Case sensitivity** applies.
 
 ## ✅ Summary
@@ -134,5 +148,95 @@ func checkNumber(_ number: Int) {
 * Swift enforces order and naming of parameters.
 * Functions can exit early using `return`.
 * Data created inside is destroyed when done.
+* Remember: **Single-line functions can omit `return`**, but multi-line ones require explicit `return` statements.
 
-Would you like me to now add **default parameter values** and **inout parameters**?
+---
+
+# Swift Functions: Returning Multiple Values with Tuples
+
+## 🔤 Single Return Value Example
+
+```swift
+func isUppercase(string: String) -> Bool {
+    string == string.uppercased()
+}
+```
+
+* Compares a string to its uppercased version.
+* Returns true if they match (string is fully uppercase), else false.
+
+## 🔢 Returning Multiple Values with Arrays (Not Recommended)
+
+```swift
+func getUser() -> [String] {
+    ["Taylor", "Swift"]
+}
+
+let user = getUser()
+print("Name: \(user[0]) \(user[1])")
+```
+
+* Hard to track element meanings and prone to errors.
+
+## 🔑 Using Dictionaries for Multiple Values (Also Not Ideal)
+
+```swift
+func getUser() -> [String: String] {
+    ["firstName": "Taylor", "lastName": "Swift"]
+}
+
+let user = getUser()
+print("Name: \(user["firstName", default: "Anonymous"]) \(user["lastName", default: "Anonymous"])")
+```
+
+* Keys are strings, need default values, prone to typos.
+
+## ✅ Returning Multiple Values with Tuples (Recommended)
+
+```swift
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let user = getUser()
+print("Name: \(user.firstName) \(user.lastName)")
+```
+
+* Provides named, type-safe values.
+* Guaranteed presence and no need for default values.
+
+### Access by Index (Less Preferred)
+
+```swift
+func getUser() -> (String, String) {
+    ("Taylor", "Swift")
+}
+
+let user = getUser()
+print("Name: \(user.0) \(user.1)")
+```
+
+### Destructuring Tuples
+
+```swift
+let (firstName, lastName) = getUser()
+print("Name: \(firstName) \(lastName)")
+```
+
+* Shorthand for pulling values into individual constants.
+* Use `_` to ignore parts of the tuple:
+
+```swift
+let (firstName, _) = getUser()
+print("Name: \(firstName)")
+```
+
+## 🏆 Summary
+
+* **Arrays** and **dictionaries** can store multiple values but have limitations.
+* **Tuples** provide named, type-safe, and fixed-size collections of values.
+* Tuples avoid default value issues and typos.
+* Use **destructuring** for convenient extraction of tuple elements.
+* Swift guarantees presence of tuple elements and types.
+
+Would you like me to extend this with **default parameter values** and **inout parameters**?
