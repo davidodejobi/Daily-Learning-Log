@@ -239,4 +239,129 @@ print("Name: \(firstName)")
 * Use **destructuring** for convenient extraction of tuple elements.
 * Swift guarantees presence of tuple elements and types.
 
-Would you like me to extend this with **default parameter values** and **inout parameters**?
+---
+
+# Swift Functions: Customizing Parameter Labels
+
+## 🧠 Key Concepts
+
+* **External parameter names** are used at the function call site.
+* **Internal parameter names** are used inside the function.
+* Swift lets you control both for clearer, more natural code.
+
+## 🔤 Example: Rolling Dice with Parameter Labels
+
+```swift
+func rollDice(sides: Int, count: Int) -> [Int] {
+    var rolls = [Int]()
+    for _ in 1...count {
+        let roll = Int.random(in: 1...sides)
+        rolls.append(roll)
+    }
+    return rolls
+}
+
+let rolls = rollDice(sides: 6, count: 4)
+```
+
+* Call site reads clearly: `rollDice(sides: 6, count: 4)`.
+
+# Swift Functions: Customizing Parameter Labels
+
+## 📝 Omitting External Parameter Names with \_
+
+When you use `_` as an external parameter name, Swift omits the label at the call site. This is common in functions where the purpose of the parameter is obvious.
+
+### Example: Checking Uppercase
+
+```swift
+func isUppercase(_ string: String) -> Bool {
+    string == string.uppercased()
+}
+
+let result = isUppercase("HELLO, WORLD")
+```
+
+### Example: Appending to an Array
+
+```swift
+var items = ["Apple", "Banana"]
+func addItem(_ item: String) {
+    items.append(item)
+}
+
+addItem("Orange")
+```
+
+### Example: Printing a Message
+
+```swift
+func printMessage(_ message: String) {
+    print(message)
+}
+
+printMessage("Hello, Swift!")
+```
+
+### Example: Calculating Square
+
+```swift
+func square(_ number: Int) -> Int {
+    number * number
+}
+
+let squared = square(5)
+print(squared) // 25
+```
+
+### Example: Checking for Even Numbers
+
+```swift
+func isEven(_ number: Int) -> Bool {
+    number % 2 == 0
+}
+
+let result = isEven(8) // true
+```
+
+
+* `_` helps remove redundancy in function calls.
+* Use for simple, clear functions where parameter intent is obvious.
+
+## 📝 Customizing Labels for Natural Language
+
+```swift
+func printTimesTables(for number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+printTimesTables(for: 5)
+```
+
+* `for` used as the external name, `number` as internal.
+* Makes call site read naturally.
+
+## 🛠 Syntax Summary
+
+* **Two names**: `func functionName(external internal: Type)`
+
+  * External name for the call site.
+  * Internal name for use inside the function.
+* **\_**: `func functionName(_ internal: Type)`
+
+  * Removes external name.
+
+## 🚀 Benefits
+
+* Enhances **readability**.
+* Makes code more **natural** to read and maintain.
+* Clarifies intent at call site and inside the function.
+
+## ✅ Example Recap
+
+* `isUppercase(_:)` – removes external name.
+* `printTimesTables(for:)` – custom external name for natural language.
+* `rollDice(sides:count:)` – default external/internal names.
+
