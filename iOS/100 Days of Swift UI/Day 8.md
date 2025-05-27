@@ -147,4 +147,130 @@ catch {
 
 ---
 
+# Swift Functions: Summary of Key Concepts
+
+## 📝 1. Defining and Calling Functions
+
+```swift
+func showWelcome() {
+    print("Welcome to my app!")
+}
+showWelcome()
+```
+
+* Basic function with no parameters or return value.
+
+## 📝 2. Function with Parameters
+
+```swift
+func printTimesTables(number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+printTimesTables(number: 5)
+```
+
+* Accepts an integer parameter.
+
+## 📝 3. Function with Multiple Parameters
+
+```swift
+func printTimesTables(number: Int, end: Int) {
+    for i in 1...end {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+printTimesTables(number: 5, end: 20)
+```
+
+* Multiple parameters for added flexibility.
+
+## 📝 4. Single Return Value
+
+```swift
+func isUppercase(string: String) -> Bool {
+    string == string.uppercased()
+}
+```
+
+* Returns a Boolean indicating if the string is uppercase.
+
+## 📝 5. Returning Multiple Values with Tuples
+
+```swift
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+```
+
+* Returns a tuple with multiple values.
+
+## 📝 6. Default Parameter Values
+
+```swift
+func printTimesTables(for number: Int, end: Int = 12) {
+    for i in 1...end {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+printTimesTables(for: 8)  // Uses default end = 12
+```
+
+* Allows optional parameters with defaults.
+
+## 📝 7. Omitting External Parameter Names
+
+```swift
+func isUppercase(_ string: String) -> Bool {
+    string == string.uppercased()
+}
+```
+
+* Removes external parameter name for cleaner calls.
+
+## 📝 8. Custom External Parameter Names
+
+```swift
+func printTimesTables(for number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+printTimesTables(for: 5)
+```
+
+* Customizes parameter labels for natural language.
+
+## 📝 9. Throwing Functions and Error Handling
+
+```swift
+enum PasswordError: Error {
+    case short, obvious
+}
+
+func checkPassword(_ password: String) throws -> String {
+    if password.count < 5 { throw PasswordError.short }
+    if password == "12345" { throw PasswordError.obvious }
+    return "Good"
+}
+
+do {
+    let result = try checkPassword("12345")
+} catch {
+    print("There was an error.")
+}
+```
+
+* Handles errors using `throws`, `do`, `try`, and `catch`.
+
+## 🏆 Summary
+
+* **Functions** are building blocks for reusable code.
+* Use **parameters** for customization.
+* Use **return values** for computed data.
+* Use **tuples** for multiple return values.
+* **Default values** simplify calls.
+* **Custom and omitted parameter names** improve clarity.
+* **Error handling** makes functions robust.
 
