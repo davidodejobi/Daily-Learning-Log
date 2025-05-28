@@ -60,5 +60,3 @@ for num in testNumbers {
 ```
 
 </details>
-
-Would you like me to prepare **more checkpoint practice questions** or move on to **inout parameters**?
