@@ -11,59 +11,55 @@
 
 Sorting organizes data for efficient operations like searching and merging. Sorting orders can be ascending (smallest to largest) or descending (largest to smallest).
 
-## 🔁 Key Sorting Algorithms
+## 🔍 Bubble Sort
 
-### 📌 Bubble Sort
-
-* **Definition:** Compares and swaps adjacent elements if needed.
-* **Use Cases:** Short, simple codes; small datasets.
-* **Complexity:** O(n²) worst case.
-* **C++ Code:**
+* **Detailed Idea:** Repeatedly step through the list, compare adjacent elements, and swap them if they are out of order. Each iteration moves the largest unsorted item to its correct position.
+* **Simple Explanation:** Like bubbles rising to the surface in water. Larger numbers "float up."
+* **Code:**
 
 ```cpp
 void bubbleSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++) {
         for (int j = 0; j < n-i-1; j++) {
-            if (arr[j] > arr[j+1]) {
-                std::swap(arr[j], arr[j+1]);
-            }
+            if (arr[j] > arr[j+1]) std::swap(arr[j], arr[j+1]);
         }
     }
 }
 ```
-
-* **Python Code:**
 
 ```python
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n-1):
         for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
+            if arr[j] > arr[j+1]: arr[j], arr[j+1] = arr[j+1], arr[j]
 ```
+- Complexity Table:
 
-### 📌 Selection Sort
+| Metric           | Value |
+| ---------------- | ----- |
+| Best Case        | O(n)  |
+| Average Case     | O(n²) |
+| Worst Case       | O(n²) |
+| Space Complexity | O(1)  |
+| Stability        | Yes   |
+## 🔍 Selection Sort
 
-* **Definition:** Selects the smallest element from the unsorted part and moves it to the sorted part.
-* **Use Cases:** Small lists; low write cost.
-* **Complexity:** O(n²).
-* **C++ Code:**
+* **Detailed Idea:** Divides the list into sorted and unsorted parts. Selects the smallest unsorted element and swaps it to the end of the sorted part.
+* **Simple Explanation:** Like finding the smallest card in a hand and placing it in order.
+* **Code:**
 
 ```cpp
 void selectionSort(int arr[], int n) {
     for (int i = 0; i < n-1; i++) {
         int min_idx = i;
         for (int j = i+1; j < n; j++) {
-            if (arr[j] < arr[min_idx])
-                min_idx = j;
+            if (arr[j] < arr[min_idx]) min_idx = j;
         }
         std::swap(arr[min_idx], arr[i]);
     }
 }
 ```
-
-* **Python Code:**
 
 ```python
 def selection_sort(arr):
@@ -71,17 +67,24 @@ def selection_sort(arr):
     for i in range(n-1):
         min_idx = i
         for j in range(i+1, n):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
+            if arr[j] < arr[min_idx]: min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
 ```
+- Complexity Table:
 
-### 📌 Insertion Sort
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n²)   |
+| Average Case     | O(n²)   |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(1)    |
+| Stability        | No      |
 
-* **Definition:** Inserts unsorted elements into their correct position.
-* **Use Cases:** Small or nearly sorted datasets.
-* **Complexity:** O(n²) worst case, O(n) best case.
-* **C++ Code:**
+## 🔍 Insertion Sort
+
+* **Detailed Idea:** Builds the sorted list by picking elements from the unsorted list and inserting them into their correct position.
+* **Simple Explanation:** Like sorting playing cards by placing each card into its right spot.
+* **Code:**
 
 ```cpp
 void insertionSort(int arr[], int n) {
@@ -97,8 +100,6 @@ void insertionSort(int arr[], int n) {
 }
 ```
 
-* **Python Code:**
-
 ```python
 def insertion_sort(arr):
     for i in range(1, len(arr)):
@@ -109,13 +110,20 @@ def insertion_sort(arr):
             j -= 1
         arr[j + 1] = key
 ```
+- Complexity Table:
 
-### 📌 Merge Sort
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n)    |
+| Average Case     | O(n²)   |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(1)    |
+| Stability        | Yes     |
+## 🔍 Merge Sort
 
-* **Definition:** Divides the list and merges sorted sublists.
-* **Use Cases:** Large datasets needing stability.
-* **Complexity:** O(n log n).
-* **C++ Code:**
+* **Detailed Idea:** Divides the list into halves, recursively sorts each half, then merges them into a sorted list.
+* **Simple Explanation:** Like splitting a deck of cards into two piles, sorting each, and combining them.
+* **Code:**
 
 ```cpp
 void merge(int arr[], int l, int m, int r) {
@@ -142,41 +150,36 @@ void mergeSort(int arr[], int l, int r) {
 }
 ```
 
-* **Python Code:**
-
 ```python
 def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr)//2
-        L = arr[:mid]
-        R = arr[mid:]
+        L, R = arr[:mid], arr[mid:]
         merge_sort(L)
         merge_sort(R)
         i = j = k = 0
         while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                arr[k] = L[i]
-                i += 1
-            else:
-                arr[k] = R[j]
-                j += 1
+            if L[i] < R[j]: arr[k] = L[i]; i += 1
+            else: arr[k] = R[j]; j += 1
             k += 1
-        while i < len(L):
-            arr[k] = L[i]
-            i += 1
-            k += 1
-        while j < len(R):
-            arr[k] = R[j]
-            j += 1
-            k += 1
+        while i < len(L): arr[k] = L[i]; i += 1; k += 1
+        while j < len(R): arr[k] = R[j]; j += 1; k += 1
 ```
+- Complexity Table:
 
-### 📌 Quick Sort
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n log n) |
+| Average Case     | O(n log n) |
+| Worst Case       | O(n log n) |
+| Space Complexity | O(n)    |
+| Stability        | Yes     |
 
-* **Definition:** Selects pivot, partitions list, and recursively sorts.
-* **Use Cases:** Large datasets; performance focus.
-* **Complexity:** O(n log n) average, O(n²) worst.
-* **C++ Code:**
+## 🔍 Quick Sort
+
+* **Detailed Idea:** Picks a pivot element, partitions list into smaller and larger elements, and recursively sorts partitions.
+* **Simple Explanation:** Like dividing a pile of cards around a chosen card and sorting both sides.
+* **Code:**
 
 ```cpp
 int partition(int arr[], int low, int high) {
@@ -200,22 +203,127 @@ void quickSort(int arr[], int low, int high) {
 }
 ```
 
-* **Python Code:**
-
 ```python
 def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    else:
-        pivot = arr[len(arr) // 2]
-        left = [x for x in arr if x < pivot]
-        middle = [x for x in arr if x == pivot]
-        right = [x for x in arr if x > pivot]
-        return quick_sort(left) + middle + quick_sort(right)
+    if len(arr) <= 1: return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quick_sort(left) + middle + quick_sort(right)
 ```
+- Complexity Table:
 
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n log n) |
+| Average Case     | O(n log n) |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(log n) |
+| Stability        | No      |
 ## 🧠 Summary
 
 * Sorting algorithms covered: bubble, selection, insertion, merge, and quick sort.
 * Each has unique performance, stability, and memory considerations.
 * Use case depends on dataset size, memory, and performance requirements.
+
+
+# Week 5: Complete Detailed Notes with Properly Formatted Tables for Sorting Algorithms
+
+## 🎯 Purpose
+
+Detailed notes, full code, beginner explanations, complexity tables, stability, and links to visual resources for each sorting algorithm.
+
+## 🔍 Bubble Sort
+
+* **Detailed Idea:** Compare adjacent elements and swap until sorted.
+* **Simple Explanation:** Like bubbles rising.
+* **Complexity Table:**
+
+```
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n)    |
+| Average Case     | O(n²)   |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(1)    |
+| Stability        | Yes     |
+```
+
+* **Visual Reference:** [Visualgo Bubble Sort](https://visualgo.net/en/sorting)
+
+## 🔍 Selection Sort
+
+* **Detailed Idea:** Select the smallest item and move it to sorted part.
+* **Simple Explanation:** Like choosing the smallest card.
+* **Complexity Table:**
+
+```
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n²)   |
+| Average Case     | O(n²)   |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(1)    |
+| Stability        | No      |
+```
+
+* **Visual Reference:** [Visualgo Selection Sort](https://visualgo.net/en/sorting)
+
+## 🔍 Insertion Sort
+
+* **Detailed Idea:** Insert elements into correct place in sorted part.
+* **Simple Explanation:** Like sorting playing cards.
+* **Complexity Table:**
+
+```
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n)    |
+| Average Case     | O(n²)   |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(1)    |
+| Stability        | Yes     |
+```
+
+* **Visual Reference:** [Visualgo Insertion Sort](https://visualgo.net/en/sorting)
+
+## 🔍 Merge Sort
+
+* **Detailed Idea:** Split, sort, and merge.
+* **Simple Explanation:** Like stacking decks.
+* **Complexity Table:**
+
+```
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n log n) |
+| Average Case     | O(n log n) |
+| Worst Case       | O(n log n) |
+| Space Complexity | O(n)    |
+| Stability        | Yes     |
+```
+
+* **Visual Reference:** [Visualgo Merge Sort](https://visualgo.net/en/sorting)
+
+## 🔍 Quick Sort
+
+* **Detailed Idea:** Partition list around pivot.
+* **Simple Explanation:** Like splitting a deck and sorting each side.
+* **Complexity Table:**
+
+```
+| Metric           | Value   |
+|-------------------|---------|
+| Best Case        | O(n log n) |
+| Average Case     | O(n log n) |
+| Worst Case       | O(n²)   |
+| Space Complexity | O(log n) |
+| Stability        | No      |
+```
+
+* **Visual Reference:** [Visualgo Quick Sort](https://visualgo.net/en/sorting)
+
+## 📚 Summary
+
+This version fixes the formatting of the complexity tables for each algorithm and provides clarity. Would you like me to also add a visual diagram for each?
