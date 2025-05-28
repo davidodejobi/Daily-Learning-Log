@@ -76,7 +76,3 @@ So the letter **A** stored in memory is literally the pattern `01000001`.
 1. What binary pattern represents the ASCII character `C` (decimal 67)?
 2. Perform the binary subtraction `1011₂ – 0101₂` and state the decimal result.
 3. Why is binary preferred in digital electronics over a base‑10 system?
-
----
-
-*Binary may look cryptic, but it’s simply the computer’s alphabet—master it, and the machine’s language opens up to you.*
