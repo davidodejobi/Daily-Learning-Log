@@ -89,7 +89,8 @@ Triangle mnemonic:
 Therefore also $V = I R$ and $R = V / I$.
 
 ### 4.2  Kirchhoff’s Laws
-
+![[Pasted image 20250601225841.png]]
+![[Pasted image 20250601225909.png]]
 1. **KCL (Current Law)** – Sum of currents entering a node = sum leaving (charge conservation).
 2. **KVL (Voltage Law)** – Algebraic sum of voltages around any closed loop = 0 (energy conservation).
 
@@ -135,7 +136,7 @@ Solve for the missing quantity in each pair and present answers in **scientific*
 ---
 
 ### 6.2  Kirchhoff’s Current Law (KCL)
-
+![[Pasted image 20250601230502.png]]
 **Statement:** The algebraic sum of currents entering and leaving any node is zero.
 
 **Symbolic form:** I₁ + I₂ + I₃ + I₄ − I₅ = 0
@@ -155,7 +156,7 @@ E + V₁ + V₂ + V₃ = 0  ⇒  V₃ = −(6 + 1.5 + 2.2) = −
 ---
 
 ### 6.4  Challenge Circuit (Parallel Sources)
-
+![[Pasted image 20250601230517.png]]
 **Setup (slide “Question 3”):** Three parallel branches between common nodes
 
 | Branch | Elements                                  |
