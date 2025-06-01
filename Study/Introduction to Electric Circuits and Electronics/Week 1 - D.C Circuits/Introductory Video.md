@@ -42,7 +42,3 @@
 1. DC circuits are the foundation of electronic understanding.
 2. Faulty circuits manifest as everyday tech problems; knowing circuit basics allows troubleshooting.
 3. Familiarity with core components prepares you for deeper topics like AC analysis, impedance, and semiconductor devices.
-
----
-
-**Next up:** Dive deeper into Ohm’s Law and resistor networks to quantify how voltage, current, and resistance interact in DC circuits.
