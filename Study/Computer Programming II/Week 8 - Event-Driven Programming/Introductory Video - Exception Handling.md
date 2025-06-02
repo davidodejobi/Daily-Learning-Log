@@ -78,7 +78,16 @@ finally {
 
 ---
 
-## 7  Key Takeaways (so far)
+## 7  Advantages of Using Exceptions
+
+1. **Seamless error handling** – Detect and handle errors without scattering `if/else` checks.
+2. **Improved readability & maintainability** – Main logic stays clear; error logic is isolated in `catch` blocks.
+3. **Enhanced user experience** – Programs fail gracefully with friendly messages instead of crashing.
+4. **Error isolation & localization** – Handlers can be placed near where errors occur, preventing ripple effects.
+5. **Flexibility** – Decide at runtime to retry, log, propagate, or convert errors.
+6. **Separation of concerns** – Core logic focuses on intended tasks; exception code handles the unexpected.
+
+## 8  Key Takeaways (so far)
 
 * An **exception** is a structured, language‑supported error signal.
 * **try / catch / finally** blocks separate normal logic from error logic.
