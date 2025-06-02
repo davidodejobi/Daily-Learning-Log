@@ -126,9 +126,3 @@ For IVPs, if the function and its derivative with respect to $y$ are continuous 
 * Visualize solutions with graphs and slope fields.
 * Apply these concepts to real-world problems (like motion or population growth).
 
-Options for further learning:
-
-* Go step-by-step through a first-order linear example.
-* Explain integrating factors with a simple example.
-* Create a diagram showing the structure of differential equations.
-* Practice identifying order and degree with sample equations.
