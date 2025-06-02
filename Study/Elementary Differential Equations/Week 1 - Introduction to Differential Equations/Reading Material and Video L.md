@@ -40,12 +40,6 @@ Common in problems involving **rates of change**, **growth**, or **decay**.
 
 #### Types of First-Order Equations:
 
-# Detailed Explanations of First-Order Differential Equations
-
-This document provides detailed explanations for the different types of first-order differential equations as outlined in the provided material.
-
----
-
 ## 1. Linear First-Order Differential Equations
 
 A linear first-order differential equation has the form:
@@ -143,43 +137,116 @@ $$
 
 ---
 
-This document provides detailed explanations of the types of first-order equations. Additional worked examples and practice problems can be provided upon request.
+### 2. Second-Order Differential Equations
 
-Would you like me to:
+### What is a Second-Order Differential Equation?
 
-* Add **worked examples** for each type?
-* Prepare **practice questions**?
-* Create **visual aids** to illustrate concepts?
+A second-order differential equation involves the second derivative of the unknown function. The general form is:
+
+$$
+\frac{d^2y}{dx^2} = f(x, y, \frac{dy}{dx})
+$$
+
+These equations describe systems with more complex dynamics, such as oscillations, vibrations, or mechanical systems.
 
 ---
 
-### 2. Second-Order Differential Equations
+## Types of Second-Order Differential Equations
 
-These involve the **second derivative** of the unknown function.
+### 1. Linear Second-Order Equations
 
-$$
-\frac{d^2y}{dx^2} = f(x,y,\frac{dy}{dx})
-$$
-
-Important for modeling **oscillatory, vibrational, and mechanical systems**.
-
-#### Types of Second-Order Equations:
-
-1. **Linear Second-Order**:
+A second-order equation is linear if **y** and its derivatives appear to the first power and are not multiplied together. The standard form is:
 
 $$
 \frac{d^2y}{dx^2} + P(x)\frac{dy}{dx} + Q(x)y = R(x)
 $$
 
-* **Homogeneous** if $R(x)=0$, otherwise **non-homogeneous**.
+* **Homogeneous** if $R(x) = 0$.
+* **Non-homogeneous** if $R(x) \neq 0$.
 
-2. **Nonlinear Second-Order**:
+#### **Homogeneous Linear Equations**
 
 $$
-\frac{d^2y}{dx^2} = f(x,y,\frac{dy}{dx})
+\frac{d^2y}{dx^2} + P(x)\frac{dy}{dx} + Q(x)y = 0
 $$
 
-* Complex, often solved numerically.
+* **Solution Strategy:** Find two linearly independent solutions (using methods like characteristic equations for constant coefficients) and form the general solution:
+
+$$
+y(x) = C_1 y_1(x) + C_2 y_2(x)
+$$
+
+#### **Non-Homogeneous Linear Equations**
+
+$$
+\frac{d^2y}{dx^2} + P(x)\frac{dy}{dx} + Q(x)y = R(x)
+$$
+
+* **Solution Strategy:**
+
+1. Find the complementary (homogeneous) solution.
+2. Find a particular solution for $R(x)$ using methods such as undetermined coefficients or variation of parameters.
+3. General solution:
+
+$$
+y(x) = y_h(x) + y_p(x)
+$$
+
+---
+
+### 2. Nonlinear Second-Order Equations
+
+Nonlinear second-order equations include terms where **y** or its derivatives appear with exponents other than one, products, or functions of **y** or $\frac{dy}{dx}$. General form:
+
+$$
+\frac{d^2y}{dx^2} = f(x, y, \frac{dy}{dx})
+$$
+
+* **Example:**
+
+$$
+\frac{d^2y}{dx^2} + y^2 = 0
+$$
+
+* **Solution Strategy:** Often requires special methods or numerical solutions as they do not follow superposition principles.
+
+---
+
+### 3. Special Forms
+
+Some second-order equations appear in classical mechanics and physics:
+
+#### **Euler-Cauchy (Cauchy-Euler) Equations**
+
+$$
+ x^2 \frac{d^2y}{dx^2} + a x \frac{dy}{dx} + b y = 0
+$$
+
+* **Solution Strategy:** Assume $y = x^m$ and solve the resulting quadratic for $m$.
+
+#### **Equations with Constant Coefficients**
+
+$$
+ a \frac{d^2y}{dx^2} + b \frac{dy}{dx} + c y = f(x)
+$$
+
+* **Solution Strategy:** Characteristic equation:
+
+$$
+ ar^2 + br + c = 0
+$$
+
+Solve for roots $r$ and build solutions based on their nature (real distinct, real repeated, or complex).
+
+---
+
+## Summary
+
+* **Second-order differential equations** model complex systems like oscillations, mechanical vibrations, and electrical circuits.
+* Can be **linear** or **nonlinear**.
+* **Homogeneous equations** have zero on the right-hand side, while **non-homogeneous** have forcing terms.
+* **Constant coefficient equations** and **Euler-Cauchy equations** are special forms with standard solution methods.
+* **Nonlinear equations** often require numerical or approximate methods.
 
 ---
 
