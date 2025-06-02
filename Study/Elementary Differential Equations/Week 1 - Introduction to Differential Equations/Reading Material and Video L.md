@@ -40,62 +40,116 @@ Common in problems involving **rates of change**, **growth**, or **decay**.
 
 #### Types of First-Order Equations:
 
-1. **Linear Equations**:
+# Detailed Explanations of First-Order Differential Equations
+
+This document provides detailed explanations for the different types of first-order differential equations as outlined in the provided material.
+
+---
+
+## 1. Linear First-Order Differential Equations
+
+A linear first-order differential equation has the form:
 
 $$
 \frac{dy}{dx} + P(x)y = Q(x)
 $$
 
-* $P(x)$ and $Q(x)$ are functions of $x$.
-* The equation is **linear** because $y$ and its derivative appear to the first power.
+* **P(x)** and **Q(x)** are functions of **x**.
+* The equation is linear because the unknown function **y** and its derivative appear only to the first power.
+* **Solution Strategy:** Find an integrating factor $\mu(x) = e^{\int P(x) dx}$, multiply both sides by $\mu(x)$, and integrate.
 
-2. **Separable Equations**:
+---
+
+## 2. Separable Equations
+
+A separable first-order equation has the form:
 
 $$
 \frac{dy}{dx} = f(x)g(y)
 $$
 
-* Can separate variables:
+* Variables **x** and **y** can be separated:
 
 $$
 \frac{dy}{g(y)} = f(x) dx
 $$
 
-* Integrate both sides.
+* **Solution Strategy:** Integrate both sides:
 
-3. **Bernoulli Equations**:
+$$
+\int \frac{1}{g(y)} dy = \int f(x) dx
+$$
+
+* Obtain the implicit solution, and solve for **y(x)** if possible.
+
+---
+
+## 3. Bernoulli Equations
+
+A Bernoulli equation is nonlinear and has the form:
 
 $$
 \frac{dy}{dx} + P(x)y = Q(x)y^n
 $$
 
-* Nonlinear if $n \neq 0, 1$.
+* **n** is any real number except 0 or 1.
+* **Linearizing Strategy:** Divide by $y^n$ and use substitution $v = y^{1-n}$, transforming the equation into a linear form.
+* Then, apply integrating factor techniques.
 
-4. **Riccati Equations**:
+---
+
+## 4. Riccati Equations
+
+A Riccati equation has the form:
 
 $$
 \frac{dy}{dx} = f(x) + g(x)y + h(x)y^2
 $$
 
-5. **Homogeneous Equations**:
+* Quadratic in **y**.
+* **Solution Strategy:** Difficult to solve in general. If a particular solution is known, substitution can reduce it to a Bernoulli equation.
+
+---
+
+## 5. Homogeneous Equations
+
+A first-order differential equation is homogeneous if it can be written as:
 
 $$
 \frac{dy}{dx} = F\left(\frac{y}{x}\right)
 $$
 
-6. **Exact and Non-Exact Equations**:
+* **Solution Strategy:** Use the substitution $v = \frac{y}{x}$, so $y = vx$ and $\frac{dy}{dx} = v + x \frac{dv}{dx}$.
+* Substitute and separate variables to solve for $v(x)$, then substitute back to find $y(x)$.
 
-* Written as:
+---
+
+## 6. Exact and Non-Exact Equations
+
+The equation is given by:
 
 $$
 M(x,y)dx + N(x,y)dy = 0
 $$
 
-* Exact if:
+* **Exact Equation:** If $\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}$, the equation is exact and there exists a function $\psi(x,y)$ such that:
 
 $$
-\frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}
+\frac{\partial \psi}{\partial x} = M, \quad \frac{\partial \psi}{\partial y} = N
 $$
+
+* **Solution Strategy:** Find $\psi(x,y)$ and set $\psi(x,y) = C$.
+* **Non-Exact:** If the equation is not exact, it may become exact with an integrating factor.
+
+---
+
+This document provides detailed explanations of the types of first-order equations. Additional worked examples and practice problems can be provided upon request.
+
+Would you like me to:
+
+* Add **worked examples** for each type?
+* Prepare **practice questions**?
+* Create **visual aids** to illustrate concepts?
 
 ---
 
