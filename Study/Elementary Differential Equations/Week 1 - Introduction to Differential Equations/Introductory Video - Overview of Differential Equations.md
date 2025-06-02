@@ -1,5 +1,3 @@
-# Detailed Breakdown of Key Concepts in Differential Equations
-
 ## 1. What is a Differential Equation?
 
 A differential equation is a mathematical equation that includes:
