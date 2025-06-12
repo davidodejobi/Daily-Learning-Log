@@ -75,7 +75,3 @@
 * [ ] Application icon & metadata set.
 * [ ] Installer tested on fresh OS image.
 * [ ] Crash‑report mechanism integrated.
-
----
-
-**End of Week 12 notes**
