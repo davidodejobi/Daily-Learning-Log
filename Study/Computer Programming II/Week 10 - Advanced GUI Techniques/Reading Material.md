@@ -76,7 +76,3 @@ A great interface is more than functional widgets; it anticipates user needs, co
 * MVC divides a GUI into Model (data/logic), View (presentation), Controller (interaction).
 * Separation yields maintainable, testable, reusable, and parallel‑friendly codebases.
 * UX enhancement covers responsiveness, intuition, accessibility, feedback, engagement, and iterative testing.
-
----
-
-**End of Week 10 Notes**
