@@ -1,35 +1,57 @@
+## 📙 Week 3 Master Note
+
+*Random Sampling, Key Sampling Concepts, and Distribution of Sample Statistics*
+
+This master note merges:
+
+1. **Concept Slides** (Population, Sample, Sampling Frame).
+2. **Narrative Guide** (definitions, designs, CLT).
+3. **Detailed Calculation Bank** (step‑by‑step arithmetic).
+
+---
+
 ## 🧠 Overview
 
-**Week 3** introduces the logic of **random sampling** and explains how sample statistics—such as the sample mean—follow their probability distributions. These ideas underpin all inferential statistics because they tell us *how much* a sample can be expected to vary from one draw to the next.
+Random sampling is the backbone of statistical inference—providing representative subsets so that sample statistics faithfully mirror the population. This week unpacks **core sampling terminology**, **probability‑based designs**, and the **behavior of sample means** via the **Central Limit Theorem (CLT)**.
 
 ---
 
 ## 🎯 Learning Objectives
 
-By the end of this lesson, you should be able to:
-
-1. **Define** random sampling and explain why it matters.
-2. **Distinguish** sampling *with* vs. *without* replacement.
-3. **Apply and compare** four probability‑based sampling designs (simple, systematic, stratified, cluster).
-4. **Explain** the concept of a *sampling distribution* and compute a **standard error**.
-5. **Use** the **Central Limit Theorem (CLT)** to approximate probabilities for sample means.
+1. Define **population**, **sampling frame**, **sample**, and **sampling distribution**.
+2. Distinguish *with* vs. *without* replacement sampling.
+3. Apply SRS, systematic, stratified, and cluster designs; compute selection probabilities.
+4. Derive the **standard error** of the sample mean and adjust with the **finite‑population correction**.
+5. Use the CLT to convert sample‑mean questions into **Normal** probability problems.
+6. Work through numerical examples that cement each idea.
 
 ---
 
-## 1. Why Random Sampling?
+## 1  Key Concepts in Sampling
 
-Random sampling gives every population member a *known, non‑zero* chance of selection. This prevents hidden biases and lets us quantify sampling uncertainty with probability theory.
+| Term               | Plain Definition                                    | Visual Analogy        |
+| ------------------ | --------------------------------------------------- | --------------------- |
+| **Population**     | Entire collection of units of interest.             | Whole cake.           |
+| **Sampling Frame** | The *list* of population units that can be sampled. | Bakery’s order sheet. |
+| **Sample**         | Subset actually selected for measurement.           | A slice of cake.      |
 
-### 1.1 Sampling Frame
+> **Frame ≠ Population?** If units are missing from the frame, they can’t be chosen → **coverage bias**.
 
-Before drawing a sample, assemble a **sampling frame**—a complete list of population units (e.g., a roster of students).
+#### Illustrative Example: Population vs. Sampling Frame
 
-### 1.2 With vs. Without Replacement
+| Concept            | Concrete Example                                                              | Included Units                                                                                                              | Missing Units                                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Population**     | **All households in Lagos State** as of 1 Jan 2026 (≈ 5 million dwellings).   | Every dwelling—urban apartments, rural huts, staff quarters, informal settlements, even newly built but unregistered homes. | None—by definition it is the full target set.                                                                                                   |
+| **Sampling Frame** | Latest **utility‑customer database** (addresses receiving electricity bills). | Dwellings connected to the power grid and officially recorded by the utility company.                                       | Off‑grid homes, vacant buildings, informal‑settlement shacks without official meters, newly constructed houses not yet entered in the database. |
 
-| Style                   | Independence?                             | Same unit can appear twice? | Example                                                                       |
-| ----------------------- | ----------------------------------------- | --------------------------- | ----------------------------------------------------------------------------- |
-| **With Replacement**    | Yes                                       | Yes                         | Drawing numbered balls from a bag and putting each back before the next draw. |
-| **Without Replacement** | No (probabilities change after each draw) | No                          | Lottery where each ticket is removed once it wins.                            |
+*Take‑away:* The sampling frame is the practical list we sample from. Any population units missing from that list create **coverage error**, potentially biasing results if the omitted units differ systematically from those listed.
+
+### 1.1  Sampling With vs. Without Replacement
+
+| Style               | Independence? | Can a unit be selected twice? |
+| ------------------- | ------------- | ----------------------------- |
+| With replacement    | Yes           | Yes                           |
+| Without replacement | No            | No                            |
 
 ---
 
