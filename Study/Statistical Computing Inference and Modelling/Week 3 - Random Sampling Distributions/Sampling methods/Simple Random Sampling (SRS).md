@@ -1,91 +1,68 @@
 ## 📌 Simple Random Sampling (SRS)
 
-> **Definition:** SRS is a probability‑based technique in which **every possible subset** of size *n* from a population of size *N* has an **equal chance** of being selected. Consequently, each individual unit also has an identical selection probability of *n/N*.
+> **Definition:** A sampling method where **every possible subset** of size *n* from a population of size *N* has the **same chance** of being chosen. Therefore, each individual’s selection probability is *n / N*.
 
 ---
 
-### 1  Why use SRS?
+### 1  Why Use SRS?
 
-* Provides a benchmark design—the basis for many theoretical results (e.g., unbiasedness of $\bar{X}$).
-* Eliminates systematic selection bias when a complete sampling frame is available.
-* Simplifies variance and standard‑error formulas.
-
----
-
-### 2  Implementation Steps
-
-1. **Create the sampling frame** (number each unit 1 … *N*).
-2. **Choose sample size** *n* (based on precision goals and resources).
-3. **Select units:**
-
-   * *Random‑number table* or *computer RNG* to generate *n* distinct integers.
-4. **Contact / measure** every selected unit—no substitutions.
-
-> **Tip:** In software (R/Python), `sample(1:N, n, replace = FALSE)` performs SRS.
+* **Baseline design:** Foundation for many theoretical results (unbiased mean, easy variance).
+* **Eliminates selection bias:** Works if a complete sampling frame exists.
+* **Straightforward math:** Simplest standard‑error formulas.
 
 ---
 
-### 3  Selection Probability & Inclusion
+### 2  How to Do It
 
-For any **specific** unit:
-
-$$
-P(\text{selected}) = \frac{n}{N}.
-$$
-
-For **any** set of *n* distinct units (an “$n$-tuple”):
-
-$$
-P(\text{select that set}) = \frac{1}{\binom{N}{n}}.
-$$
+1. **Number** every unit 1 … *N* (sampling frame).
+2. **Decide** sample size *n*.
+3. **Randomly pick** *n* distinct numbers (random‑number table or computer RNG).
+4. **Survey** all selected units—no substitutions.
 
 ---
 
-### 4  Worked Example
+### 3  Selection Probability
 
-> **Scenario:** Population of *N* = 100 individuals. Draw *n* = 15 via SRS. What is the probability that a particular individual (e.g., ID #23) is included?
-
-Solution:
-
-P(#23 selected) = 15 / 100 = 0.15 (15 %)
-
----
-
-### 5  Estimator Properties
-
-| Statistic             | Formula                                    | Expected Value    | Variance (without replacement)                                    |
-| --------------------- | ------------------------------------------ | ----------------- | ----------------------------------------------------------------- |
-| **Sample mean**       | $\bar{X} = \tfrac{1}{n}\sum_{i=1}^{n} X_i$ | E\[$\bar{X}$] = μ | Var($\bar{X}$) = $\tfrac{\sigma^2}{n}\left(1−\tfrac{n}{N}\right)$ |
-| **Sample proportion** | $\hat{p} = \tfrac{x}{n}$                   | E\[$\hat{p}$] = p | Var($\hat{p}$) = $\tfrac{p(1−p)}{n}\left(1−\tfrac{n}{N}\right)$   |
-
-> The **finite‑population correction (fpc)** term $(1−n/N)$ matters once *n/N* > 0.05.
+* **Any individual:**
+  $P(\text{selected}) = \tfrac{n}{N}.$
+* **Any specific set of *n* units:**
+  $P(\text{that set}) = \frac{1}{\binom{N}{n}}.$
 
 ---
 
-### 6  Strengths & Limitations
+### 4  Quick Example
 
-| Strengths                                                         | Limitations                                                                               |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Easiest to analyse; unbiased estimators.                          | Requires *complete* frame—rare for hard‑to‑reach populations.                             |
-| Straightforward standard‑error formulas.                          | Fieldwork cost can be high if sampled units are geographically dispersed.                 |
-| Basis for other complex designs (post‑stratification, weighting). | No built‑in control over subgroup sizes (may under‑represent small but important strata). |
+Population *N* = 100, sample *n* = 15.
+Probability an individual (ID #23) is in the sample: 15/100 = 0.15 (15 %).
 
 ---
 
-### 7  Practical Tips
+### 5  Estimator Snapshot (Without‑Replacement Variance)
 
-* Use reproducible random seeds for audit trails.
-* If sample units are people, anticipate non‑response—plan callbacks or replacements *before* starting.
-* For very large *N*, consider **systematic SRS** (select every *k*‑th after a random start) to simplify selection while retaining SRS properties.
+| Statistic             | Expected Value | Variance                                      |
+| --------------------- | -------------- | --------------------------------------------- |
+| Mean ($\bar X$)       | μ              | $\dfrac{σ^2}{n}\Bigl(1−\tfrac{n}{N}\Bigr)$    |
+| Proportion ($\hat p$) | p              | $\dfrac{p(1−p)}{n}\Bigl(1−\tfrac{n}{N}\Bigr)$ |
 
----
-
-### 8  Mini‑Exercises
-
-1. **Selection Probability**: In a class of 45 students, an SRS of 9 is taken. What is P(student *not* selected)? *(Ans: 0.8)*
-2. **Estimator Variance**: Population σ = 12, N = 500, n = 50. Compute SE($\bar{X}$) with fpc.
-3. **Simulation**: Write R/Python code to draw 10 000 SRS samples (*n* = 30) from a skewed population and plot the distribution of $\bar{X}$.
+> **Finite‑population correction (fpc)** $(1−n/N)$ becomes important if *n/N* > 0.05.
 
 ---
 
-*Prepared as a standalone reference for Week 3 – Simple Random Sampling.*
+### 6  Pros & Cons
+
+| Pros                                    | Cons                                                 |
+| --------------------------------------- | ---------------------------------------------------- |
+| Easy to analyse; unbiased estimators.   | Requires complete frame.                             |
+| Simple variance formulas.               | Can be costly if sampled units are widely scattered. |
+| Serves as baseline for complex designs. | Does not guarantee subgroup representation.          |
+
+---
+
+### 7  Mini‑Checks
+
+1. Class of 45, sample 9: P(not selected) = 0.8.
+2. If σ = 12, N = 500, n = 50 → SE($\bar X$) = 12 / √50 × √(1−0.1) ≈ 1.51.
+
+---
+
+*Trimmed reference for Week 3 – Simple Random Sampling*
