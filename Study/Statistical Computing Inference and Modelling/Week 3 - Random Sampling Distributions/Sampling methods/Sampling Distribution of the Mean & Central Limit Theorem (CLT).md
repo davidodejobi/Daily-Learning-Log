@@ -40,6 +40,38 @@ $$
 
 > **Interpretation:** A random sample of 36 will have a mean below **62** about **88 %** of the time.
 
+Example 2
+
+> **Scenario:** Population mean μ = 50, standard deviation σ = 8. Take a simple random sample of size n = 100. Using the Central Limit Theorem, approximate $P(\bar{X} > 51)$.
+
+---
+
+ Step 1 – Compute Standard Error
+$$
+SE(\bar{X}) = \frac{σ}{\sqrt{n}} = \frac{8}{\sqrt{100}} = 0.8.
+$$
+
+Step 2 – Convert Threshold to Z‑Score
+$$
+Z = \frac{51 - 50}{0.8} = 1.25.
+$$
+
+Step 3 – Find Right‑Tail Probability
+
+From a standard Z‑table, $P(Z \le 1.25) \approx 0.894$.
+
+Right‑tail area:
+$$
+P(Z > 1.25) = 1 - 0.894 = 0.106.
+$$
+
+Result
+$$
+P(\bar{X} > 51) \approx \mathbf{0.106}\;\text{(about 10.6 %)}.
+$$
+
+> **Interpretation:** Roughly one in ten random samples of 100 will have a mean exceeding 51, even though the population mean is 50.
+
 ---
 
 ### 4  Quick Reminders
