@@ -43,6 +43,41 @@ $$
 
 Table gives P(Z > 1) ≈ 0.159.
 
+#### Full Example – Standard Error & CLT
+
+**Question (verbatim from slide):**
+
+> *“Assume a population with a **non‑normal distribution**, where the mean (μ) is 50, and the standard deviation (σ) is 15. If you take a random sample of 100 individuals from this population, use the **Central Limit Theorem** to approximate the probability that the sample mean is less than 52 **and** calculate the standard error of the sample mean.”*
+
+---
+
+**Given values**
+
+* Population mean (μ): **50**
+* Population standard deviation (σ): **15**
+* Sample size (n): **100**
+* Threshold value for sample mean: **52**
+
+#### Step‑by‑Step Solution‑by‑Step Solution
+
+| Step                                          | Work                                                           | Result    |
+| --------------------------------------------- | -------------------------------------------------------------- | --------- |
+| **1. Compute the Standard Error (SE)**        | $SE(\bar X) = \dfrac{σ}{\sqrt{n}} = \dfrac{15}{\sqrt{100}}$    | **1.5**   |
+| **2. Convert the boundary (52) to a Z‑score** | $Z = \dfrac{52 − μ}{SE} = \dfrac{52 − 50}{1.5}$                | **1.33**  |
+| **3. Look up left‑tail probability**          | From the Z‑table, $P(Z \le 1.33) \approx 0.908$                | **0.908** |
+| **4. State the interpretation**               | About **90.8 %** of samples of size 100 will have a mean < 52. | —         |
+
+> **Key idea:** Even though the population is non‑Normal, the large sample size (100) lets us use the CLT to treat $\bar X$ as approximately Normal.
+
+---
+
+#### Quick Check
+
+* If the bound were **55**, the Z‑score would be $(55−50)/1.5 = 3.33$ ⇒ left‑tail ≈ 0.9996 ⇒ $P(\bar X < 55)$ ≈ 0.9996, so $P(\bar X > 55)$ ≈ 0.0004.
+
+*This document presents the full wording and a clear, four‑step calculation.*
+
+
 ---
 
 ### 4  Finite-Population Correction (fpc)
