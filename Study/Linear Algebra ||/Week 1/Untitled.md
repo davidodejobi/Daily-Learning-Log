@@ -1,390 +1,138 @@
-Introduction to Systems of Linear Equations and Gaussian Elimination
-This document provides a comprehensive overview of solving systems of linear equations using the Gaussian elimination method, a fundamental concept in linear algebra.
+# MIVA – MTH 204
 
-Key Definitions
-Linear Equation: An equation that can be expressed in the standard form:
-a 
-1
-​
- x 
-1
-​
- +a 
-2
-​
- x 
-2
-​
- +a 
-3
-​
- x 
-3
-​
- +⋅⋅⋅+a 
-n
-​
- x 
-n
-​
- =b
-where a 
-1
-​
- ,a 
-2
-​
- ,⋅⋅⋅,a 
-n
-​
-  and b are constants. The a 
-k
-​
-  values are the coefficients of the variables x 
-k
-​
- , and b is the constant term.
+## Week 1 Study Notes
 
-Degenerate Linear Equation: A linear equation where all coefficients are zero (0x 
-1
-​
- +0x 
-2
-​
- +⋅⋅⋅+0x 
-n
-​
- =b).
+---
 
-Solution of a Linear Equation: A set of values for the unknowns (e.g., x 
-1
-​
- =k 
-1
-​
- ,x 
-2
-​
- =k 
-2
-​
- ,⋅⋅⋅,x 
-n
-​
- =k 
-n
-​
- ) that satisfies the equation.
+### Lesson Objectives
 
-System of Linear Equations: A collection of linear equations with the same set of unknowns.
+* Identify what makes an equation **linear**.
+* Define a **system** of linear equations.
+* List the three **elementary row operations**.
+* Solve systems with the **Gaussian‑elimination** technique.
 
-Homogeneous System: A system where all constant terms (b 
-i
-​
- ) are zero.
+---
 
-Nonhomogeneous System: A system where at least one constant term is not zero.
+## 1  Linear equations & their systems
 
-Triangular Form: A system of linear equations where the leading unknown in each successive equation is to the right of the leading unknown in the preceding equation, forming a triangular shape of coefficients.
+A **linear equation** in variables $x_1,x_2,\dots ,x_n$ can be written
 
-Echelon Form: A system is in echelon form if:
+$$
+ a_1x_1+a_2x_2+\dots +a_nx_n=b,
+$$
 
-There are no degenerate equations.
+where the coefficients $a_i$ and the constant $b$ are real (or complex) numbers.
 
-The leading unknown in each equation (other than the first) is to the right of the leading unknown in the equation above it.
+A **system of linear equations** is a collection of two or more linear equations sharing the same variables.
 
-Pivot and Free Variables:
+| Term             | Meaning                                                                       |
+| ---------------- | ----------------------------------------------------------------------------- |
+| **Consistent**   | At least one solution exists.                                                 |
+| **Inconsistent** | No solution exists.                                                           |
+| **Independent**  | Exactly one solution (the lines/planes intersect at a single point).          |
+| **Dependent**    | Infinitely many solutions (the equations describe the same geometric object). |
 
-Pivot Variables: The leading unknowns in a system that is in echelon or triangular form.
+---
 
-Free Variables: The unknowns that are not pivot variables.
+## 2  Matrix representation
 
-Elementary Row Operations
-These are operations that can be performed on a system of linear equations to transform it into an equivalent system (a system with the same solution set).
+1. **Coefficient matrix** $A$ – the numbers $a_{ij}$ alone.
+2. **Augmented matrix** $[A\,|\,b]$ – the coefficient matrix with the constants column appended.
 
-[E1] Interchange: Swap the positions of two equations (L 
-i
-​
- ↔L 
-j
-​
- ).
+Writing the system in matrix form $A\mathbf x=\mathbf b$ lets us manipulate rows mechanically.
 
-[E2] Scaling: Replace an equation with a nonzero multiple of itself (kL 
-i
-​
- →L 
-i
-​
- , where k
-
-=0).
+---
 
-[E3] Replacement: Replace an equation with the sum of itself and a multiple of another equation (kL 
-i
-​
- +L 
-j
-​
- →L 
-j
-​
- ).
+## 3  Elementary row operations
 
-The Gaussian Elimination Method
-This is a systematic procedure for solving systems of linear equations. It has two main phases:
+Gaussian elimination relies on three moves that keep the solution set unchanged:
 
-Part A: Forward Elimination
-The goal is to reduce the original system into an equivalent system in either triangular or echelon form using elementary row operations.
+1. **Row swap** $R_i\leftrightarrow R_j$
+2. **Scaling a row** $kR_i\to R_i$ (with $k\neq0$)
+3. **Row replacement** $R_i+kR_j\to R_i$
 
-Part B: Backward Substitution
-Once the system is in a simplified form (triangular or echelon), the solution is found by solving for the variables starting from the last equation and working backwards.
+---
 
-Algorithm for Gaussian Elimination
-Forward Elimination:
+## 4  Gaussian elimination – overview
 
-Step 1: Identify the first unknown with a nonzero coefficient. If necessary, use an interchange operation to move this equation to the top. This coefficient is the first pivot.
+> The method consists of two parts: forward elimination and back substitution.
 
-Step 2: Use the pivot to eliminate the corresponding unknown from all equations below it. This is done by adding a suitable multiple of the pivot row to each of the subsequent rows.
+### 4.1 Forward elimination
 
-Step 3: Examine the new equations.
+Transform the augmented matrix to **row‑echelon form (REF)**:
 
-If an equation becomes degenerate of the form 0=b where b
-
-=0, the system is inconsistent and has no solution. Stop.
+* All non‑zero rows lie above any all‑zero rows.
+* The *leading 1* (pivot) of each non‑zero row appears to the right of the leading 1 in the row above.
 
-If an equation becomes 0=0 or is a multiple of another, it is redundant and can be deleted.
+If a contradictory row such as $[0\,0\,0\,|\,c]\ (c\neq0)$ appears, the system is **inconsistent**.
 
-Step 4 (Recursion): Repeat the elimination steps for the subsystem formed by all equations excluding the first one. Continue until the system is in triangular or echelon form.
+### 4.2 Backward substitution
 
-Backward Substitution:
+Once in REF (or the stricter reduced REF), solve for the last pivot variable and substitute upward to obtain all unknowns.
 
-Solve the last equation for its pivot variable.
+---
 
-Substitute this value into the second-to-last equation and solve for its pivot variable.
+## 5  Step‑by‑step algorithm
 
-Continue this process, moving upwards, until all pivot variables have been found. If there are free variables, the system will have infinitely many solutions.
+1. **Locate** the left‑most non‑zero column; swap rows to bring a non‑zero entry to the top.
+2. **Scale** that row to make the pivot 1.
+3. **Zero‑out all entries below** the pivot using row replacement.
+4. **Cover** the row just used and **repeat** the process on the sub‑matrix that remains (moving down and right).
+5. When the last pivot is placed, **work upward**: scale pivots (if necessary) and eliminate the entries *above* each pivot to reach reduced REF.
 
-Examples from the Document
-Example 1:
-Original System:
-x 
-1
-​
- −3x 
-2
-​
- −2x 
-3
-​
- =6
-2x 
-1
-​
- −4x 
-2
-​
- −3x 
-3
-​
- =8
-−3x 
-1
-​
- +6x 
-2
-​
- +8x 
-3
-​
- =−5
+---
 
-After Forward Elimination:
-x 
-1
-​
- −3x 
-2
-​
- −2x 
-3
-​
- =6
-2x 
-2
-​
- +x 
-3
-​
- =−4
-7x 
-3
-​
- =14
+## 6  Worked example (3 × 3)
 
-Backward Substitution:
+Original system
 
-From the last equation: 7x 
-3
-​
- =14⟹x 
-3
-​
- =2.
+$$
+\begin{aligned}
+ x_1-3x_2-2x_3 &= 6\\
+ 2x_2+x_3 &= -4\\
+ -3x_2+2x_3 &= 13
+\end{aligned}
+$$
 
-Substitute x 
-3
-​
- =2 into the second equation: 2x 
-2
-​
- +2=−4⟹2x 
-2
-​
- =−6⟹x 
-2
-​
- =−3.
+| Step | Operation                                                    | Augmented matrix          |           |                          |                   |
+| ---- | ------------------------------------------------------------ | ------------------------- | --------- | ------------------------ | ----------------- |
+| 1    | $R_2\leftarrow -2R_1+R_2$                                    | (\begin{bmatrix}1&-3&-2&  | &6\0&5&5& | &-16\\-3&6&8&            | &-5\end{bmatrix}) |
+| 2    | $R_3\leftarrow 3R_1+R_3$                                     | (\begin{bmatrix}1&-3&-2&  | &6\0&5&5& | &-16\0&-3&2&             | &13\end{bmatrix}) |
+| 3    | $R_2\leftarrow \tfrac{1}{5}R_2$                              | (\begin{bmatrix}1&-3&-2&  | &6\0&1&1& | &-\tfrac{16}{5}\0&-3&2&  | &13\end{bmatrix}) |
+| 4    | $R_1\leftarrow R_1+3R_2;\; R_3\leftarrow R_3+3R_2$           | (\begin{bmatrix}1&0&-1/2& | &0\0&1&1& | &-\tfrac{16}{5}\0&0&7/2& | &7\end{bmatrix})  |
+| 5    | $R_3\leftarrow \tfrac{2}{7}R_3$                              | (\begin{bmatrix}1&0&-1/2& | &0\0&1&1& | &-\tfrac{16}{5}\0&0&1&   | &2\end{bmatrix})  |
+| 6    | $R_1\leftarrow R_1+\tfrac{1}{2}R_3;\; R_2\leftarrow R_2-R_3$ | (\begin{bmatrix}1&0&0&    | &1\0&1&0& | &-3\0&0&1&               | &2\end{bmatrix})  |
 
-Substitute x 
-2
-​
- =−3 and x 
-3
-​
- =2 into the first equation: x 
-1
-​
- −3(−3)−2(2)=6⟹x 
-1
-​
- +9−4=6⟹x 
-1
-​
- =1.
+Solution: $x_1=1,\;x_2=-3,\;x_3=2$.
 
-Solution: x 
-1
-​
- =1,x 
-2
-​
- =−3,x 
-3
-​
- =2.
+---
 
-Example 2:
-Original System:
-x 
-1
-​
- −2x 
-2
-​
- −3x 
-3
-​
- =3
-2x 
-1
-​
- −x 
-2
-​
- −4x 
-3
-​
- =7
-3x 
-1
-​
- −3x 
-2
-​
- −5x 
-3
-​
- =8
+## 7  Why Gaussian elimination matters
 
-After Forward Elimination:
-x 
-1
-​
- −2x 
-2
-​
- −3x 
-3
-​
- =3
-3x 
-2
-​
- +2x 
-3
-​
- =1
-−2x 
-3
-​
- =2
+* **Universality** – works on any finite linear system.
+* **Foundation for advanced topics** – LU‑decomposition, determinants, rank, eigen‑analysis, and numerical linear algebra all build on REF ideas.
+* **Algorithmic efficiency** – straightforward to implement on a computer; forms the core of most linear‑solver libraries.
 
-Backward Substitution:
+---
 
-From the last equation: −2x 
-3
-​
- =2⟹x 
-3
-​
- =−1.
+## 8  Quick self‑check
 
-Substitute x 
-3
-​
- =−1 into the second equation: 3x 
-2
-​
- +2(−1)=1⟹3x 
-2
-​
- =3⟹x 
-2
-​
- =1.
+1. List the three elementary row operations.
+2. Explain how you detect an inconsistent system during elimination.
+3. Carry out forward elimination on
+   $\begin{aligned}x+2y+z&=2\\2x+5y+z&=5\\-x+4y+2z&=6\end{aligned}$
+   and state its REF.
 
-Substitute x 
-2
-​
- =1 and x 
-3
-​
- =−1 into the first equation: x 
-1
-​
- −2(1)−3(−1)=3⟹x 
-1
-​
- −2+3=3⟹x 
-1
-​
- =2.
+---
 
-Solution: x 
-1
-​
- =2,x 
-2
-​
- =1,x 
-3
-​
- =−1.
-(Note: There appears to be a discrepancy in the provided document's solution for Example 2. Based on the forward elimination shown, the solution should be as calculated above, not x 
-2
-​
- =3.)
+## 9  Further reading
 
-Conclusion
-Gaussian elimination is a powerful and systematic technique for solving systems of linear equations. By reducing a complex system to a simpler echelon or triangular form, it allows for the straightforward calculation of the unique solution, determination of inconsistency, or characterization of an infinite number of solutions. It is a foundational tool in many areas of mathematics, science, and engineering.
+* Lay, D. C. *Linear Algebra and Its Applications* (5th ed.)
+* Carrell, J. B. *Fundamentals of Linear Algebra*
+* Lipschutz & Lipson. *Schaum’s Outline of Linear Algebra*
+
+---
+
+### Key takeaway
+
+Mastering **Gaussian elimination** equips you with a systematic toolbox for solving any linear system—from hand‑worked homework to large‑scale computational models.
