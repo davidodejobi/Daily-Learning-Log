@@ -103,5 +103,3 @@ After solving, trace the loop again: voltage rises minus drops should now cancel
 * Memorise $V = IR$ and be fluent converting metric prefixes (mA, µA, kΩ, MΩ).
 * Always label assumed current directions *before* applying KCL or KVL — the math will reveal if a direction was guessed wrong.
 * Nodes → currents, loops → voltages. Keep them conceptually separate to avoid sign errors.
-
-> *Practice every day*: Solve two quick Ohm/KCL/KVL problems to lock in the habits.
