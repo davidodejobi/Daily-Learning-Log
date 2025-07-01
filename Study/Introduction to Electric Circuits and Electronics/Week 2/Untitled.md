@@ -101,7 +101,7 @@ $$
 ### Solve for the loop current
 
 
-\(I = -\dfrac{10}{18}\,\text{A} = -\dfrac{5}{9}\,\text{A} \approx -0.556\,\text{A}\).
+$I = -\dfrac{10}{18}\,\text{A} = -\dfrac{5}{9}\,\text{A} \approx -0.556\,\text{A}.$
 
 
 *Interpretation.* The negative sign tells us the real current flows **counter‑clockwise** (opposite our initial clockwise guess) with magnitude **0.556 A**.
