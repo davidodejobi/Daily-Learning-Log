@@ -70,27 +70,53 @@ $$
 
 ### 5.2  KVL Loop Example (slide “Solved Examples”)
 
-*Circuit sketch:* One loop containing (in travel order)
+We assume a **clockwise loop current** $I$. Travelling clockwise we meet:
 
-1. 20 V battery (rise)
-2. 10 Ω resistor (drop = $10I$)
-3. 10 V source (drop)
-4. 2 Ω resistor (drop = $2I$)
-5. 40 V battery (drop)
-6. 6 Ω resistor (drop = $6I$).
+| Element (with polarity as sketched) | KVL contribution                                |
+| ----------------------------------- | ----------------------------------------------- |
+| 20 V battery (rise)                 | `+20` V                                         |
+| 10 Ω resistor                       | `−10I`                                          |
+| 10 V source (drop)                  | `+10` V *(polarity opposite the first battery)* |
+| 2 Ω resistor                        | `−2I`                                           |
+| 40 V battery (drop)                 | `−40` V                                         |
+| 6 Ω resistor                        | `−6I`                                           |
 
-KVL equation (clockwise):
+### Form the KVL equation
 
 $$
-+20\;\text{V} \; -10I +10\;\text{V} \; -2I \; -40\;\text{V} \; -6I = 0.
++20\,	ext{V}\; -10I \; +10\,	ext{V}\; -2I \; -40\,	ext{V}\; -6I = 0.
 $$
 
-Combine constants and $I$-terms:
+### Collect like terms
 
-$$-10 ; -18I = 0 \quad\Longrightarrow\quad I = -\frac{10}{18} = -0.556,\text{A}.
+Constants: $20 + 10 - 40 = -10$ V
+Resistive terms: $(-10I - 2I - 6I) = -18I$
+
+Thus
+
+$$
+-10 - 18I = 0.
 $$
 
-**Interpretation.** The negative sign means the actual current flows opposite to the direction we assumed when writing the equation.
+### Solve for the loop current
+
+
+\(I = -\dfrac{10}{18}\,\text{A} = -\dfrac{5}{9}\,\text{A} \approx -0.556\,\text{A}\).
+
+
+*Interpretation.* The negative sign tells us the real current flows **counter‑clockwise** (opposite our initial clockwise guess) with magnitude **0.556 A**.
+
+### Verify individual drops (using |I| = 0.556 A)
+
+\| Resistor | |I|·R (V) |
+\|----------|-----------|
+\| 10 Ω     | $0.556×10 ≈ 5.56$ |
+\| 2 Ω      | $0.556×2  ≈ 1.11$ |
+\| 6 Ω      | $0.556×6  ≈ 3.33$ |
+
+Clockwise sign‑correct sum: $+20 - 5.56 + 10 - 1.11 - 40 - 3.33 ≈ 0\,	ext{V}$ — KVL satisfied.
+
+---
 
 ### 5.3  Sanity‑Check Tip
 
@@ -103,3 +129,7 @@ After solving, trace the loop again: voltage rises minus drops should now cancel
 * Memorise $V = IR$ and be fluent converting metric prefixes (mA, µA, kΩ, MΩ).
 * Always label assumed current directions *before* applying KCL or KVL — the math will reveal if a direction was guessed wrong.
 * Nodes → currents, loops → voltages. Keep them conceptually separate to avoid sign errors.
+
+> *Practice every day*: Solve two quick Ohm/KCL/KVL problems to lock in the habits.
+
+---
