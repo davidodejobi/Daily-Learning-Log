@@ -36,6 +36,7 @@ The lecturer likens *polymorphism* to students posing differently in front of th
 
 ## 3  Code Illustration – Animal Hierarchy
 
+**C++ Snippet**
 ```cpp
 #include <iostream>
 using std::cout; using std::endl;
@@ -59,6 +60,14 @@ int main() {
     for (Animal* a : zoo) delete a;
 }
 ```
+
+
+
+
+**Links:**
+- [Day 5](<TIL/iOS/100 Days of Swift UI/Day 5.md>)
+- [1. Getting Started](<TIL/Flutter/Drift/1. Getting Started.md>)
+- [11. DAO](<TIL/Flutter/Drift/11. DAO.md>)
 
 **Key Takeaways**
 
