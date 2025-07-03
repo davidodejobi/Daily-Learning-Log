@@ -1,38 +1,24 @@
 
-📚 Week 3: Implementing Iterators, Enumerators, Lists, Stacks, and Queues
--------------------------------------------------------------------------
-
+## 📚 Week 3: Implementing Iterators, Enumerators, Lists, Stacks, and Queues
 * * *
-
-🧠 **Big Idea**
----------------
-
+## 🧠 **Big Idea**
 Just like organizing a library improves book retrieval, organizing variables using **data structures** improves efficiency in complex programs.
-
 * * *
 
-🧾 **Why Use Data Structures?**
--------------------------------
-
+## 🧾 **Why Use Data Structures?**
 *   Helps manage large sets of data
 *   Organizes memory efficiently
 *   Reduces complexity when accessing, modifying, or removing data
 *   Ensures structured code and easier maintenance
 
-* * *
-
-🔁 **1\. Iterators (a.k.a. "itr")**
------------------------------------
+## 🔁 **1\. Iterators (a.k.a. "itr")**
 
 ### ✅ Definition:
 
 Objects that allow you to traverse containers (like vectors, lists) element by element.
-
 ### 📌 Uses:
-
 *   Accessing, modifying, or removing elements in a sequence
 *   Works like a cursor to step through collections
-
 ### 🔍 Example (C++):
 
 ```cpp
@@ -41,8 +27,6 @@ for (auto it = numbers.begin(); it != numbers.end(); ++it) {
     std::cout << *it << " ";
 }
 ```
-
-* * *
 
 🔢 **2\. Enumerators (Enums)**
 ------------------------------
