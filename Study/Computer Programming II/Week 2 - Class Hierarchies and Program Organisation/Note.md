@@ -135,6 +135,3 @@ Enforces **separation of concerns** and minimises cross‑layer dependencies.
 * *Effective Java* – Bloch (item on packages & access control)
 * *Clean Architecture* – Bob Martin (layered design)
 
----
-
-**End of Week 2 Detailed Notes**
