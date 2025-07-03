@@ -1,114 +1,196 @@
+# Week 1: Advanced OOP Foundations – Polymorphism, Abstract Classes & Interfaces (C++ + Python)
 
-## 🧠 **Learning Objectives**
+## 🧠 Learning Objectives
 
-*   Understand and implement **polymorphism**
-*   Create and use **interfaces**
-*   Grasp the use of **abstract classes**
-*   Apply **advanced OOP principles** to solve problems
+* Understand and implement **polymorphism** (static & dynamic)
+* Create and use **interfaces** in C++ (pure abstract classes)
+* Grasp the role of **abstract classes**
+* Apply advanced OOP principles to craft flexible solutions
 
-## 🔁 **OOP Recap: Key Concepts**
+---
 
-*   **Class**: Blueprint for creating objects (defines properties + methods)
-*   **Object**: Instance of a class, holds actual data
-*   **Inheritance**: Derived class inherits properties/methods from a base class
-*   **Encapsulation**: Hide sensitive data (via `private`), expose only what's necessary
-*   **Polymorphism**: Same interface, different implementations
+## 🔁 OOP Recap: Key Concepts
 
-## 🧩 **Polymorphism in Detail**
+| Concept           | Summary                                                       |
+| ----------------- | ------------------------------------------------------------- |
+| **Class**         | Blueprint for creating objects (defines properties + methods) |
+| **Object**        | Instance of a class, stores actual data                       |
+| **Inheritance**   | Derived class reuses/extends base functionality               |
+| **Encapsulation** | Hide sensitive data via `private`; expose via getters/setters |
+| **Polymorphism**  | Same interface → many implementations                         |
 
-### 📌 Definition:
+---
 
-*   "Many forms" – enables objects of different classes to be treated as instances of a common superclass.
-*   Each object responds differently to the **same method call**.
+## 🧩 Polymorphism in Detail
 
-### 🧠 Types of Polymorphism:
+### 📌 Definition
 
-| Type | Description |
-| --- | --- |
-| **Compile-Time** | aka **Method Overloading**: same method name, different parameter lists |
-| **Run-Time** | aka **Method Overriding**: subclass redefines a method from superclass |
+> “Many forms” — enables objects of different classes to be treated as instances of a common superclass, each responding differently to the **same method call**.
 
-### ✅ Why It's Important:
+### 🧠 Types of Polymorphism
 
-*   Enhances **code reusability**
-*   Improves **flexibility** and **maintainability**
-*   Enables **dynamic binding** (method invoked is determined at runtime)
+| Type             | Description               | C++ Mechanism                      |
+| ---------------- | ------------------------- | ---------------------------------- |
+| **Compile‑Time** | Resolved by compiler      | Function/Operator **Overloading**  |
+| **Run‑Time**     | Resolved during execution | **Virtual** functions + overriding |
 
-* * *
+### ✅ Why It Matters
 
-## 🧱 **Abstract Classes**
+* **Code reusability & flexibility**
+* **Maintainability** via dynamic binding
+* Extensible: new subclasses without changing caller code
 
-### 📌 What is an Abstract Class?
+---
 
-*   A class **you can't instantiate** directly
-*   Contains at least one **pure virtual function**:
-    ```cpp
-    class Animal {
-      virtual void makeSound() = 0;  // pure virtual
-    };
-    ```
+## 🧱 Abstract Classes
 
-### 🧰 Features:
+| Feature       | Details                                        |
+| ------------- | ---------------------------------------------- |
+| Instantiation | ❌ Cannot instantiate directly                  |
+| Requirement   | At least one **pure virtual** function (`=0`)  |
+| Mixed Methods | May include concrete methods & data members    |
+| Purpose       | Provide shared interface & base implementation |
 
-*   Can have **both** pure virtual and concrete (implemented) methods
-*   Used to define a **shared interface** and base implementation for derived classes
+```cpp
+class Shape {
+public:
+    virtual double area() const = 0;   // pure virtual → no impl
+    virtual ~Shape() = default;        // good practice
+};
+```
 
-### 💡 Use Case:
+### 💡 Use‑Cases
 
-*   Representing a **generic concept** (e.g., Vehicle, Animal)
-*   Sharing code across subclasses, but **forcing** them to implement specific behaviors
+* Generic concepts (Vehicle, Animal) where subclasses **must** implement certain behaviours.
 
-## 🔌 **Interfaces in C++**
+---
 
-### 📌 What is an Interface?
+## 🔌 Interfaces in C++
 
-*   Implemented using **pure abstract classes**
-*   Contains **only pure virtual functions**
-*   No data members or implemented methods
+* Implemented as **pure abstract classes** (all methods `=0`, no data).
+* Provide a **contract**; multiple interfaces supported via multiple inheritance.
 
-### 🧰 Features:
+```cpp
+class Speakable {                       // interface
+public:
+    virtual void speak() const = 0;
+};
+```
 
-*   Define a **contract** for implementing classes
-*   Support **multiple inheritance**
-*   Promote **modular** and **flexible** code
+### 🔀 Multiple Interfaces Example
 
-### 🔀 Multiple Interfaces:
+```cpp
+class Animal { public: virtual void makeSound() const = 0; };
+class Movable { public: virtual void move() const = 0; };
 
-*   A class can implement multiple interfaces:
-    ```cpp
-    class Animal {
-      virtual void makeSound() = 0;
-    };
-    class Movable {
-      virtual void move() = 0;
-    };
-    class Dog : public Animal, public Movable {
-      void makeSound() override { /* ... */ }
-      void move() override { /* ... */ }
-    };
-    ```
+class Dog : public Animal, public Movable {
+public:
+    void makeSound() const override { /*...*/ }
+    void move() const override      { /*...*/ }
+};
+```
 
+---
 
-## 🧠 **Abstract Class vs Interface**
+## 🧠 Abstract Class vs Interface Comparison
 
-| Feature              | Abstract Class   | Interface (Pure Abstract Class) |
-| -------------------- | ---------------- | ------------------------------- |
-| Instantiable?        | ❌                | ❌                               |
-| Pure Virtual Methods | ✅ (at least one) | ✅ (all)                         |
-| Concrete Methods     | ✅                | ❌                               |
-| Member Variables     | ✅                | ❌                               |
-| Multiple Inheritance | ✅                | ✅                               |
+| Feature                   | Abstract Class | Interface |
+| ------------------------- | -------------- | --------- |
+| Instantiable?             | ❌              | ❌         |
+| At least one pure virtual | ✅              | ✅ (all)   |
+| Concrete methods allowed  | ✅              | ❌         |
+| Member variables          | ✅              | ❌         |
+| Multiple inheritance      | ✅              | ✅         |
 
-## 📝 **Sample Questions**
+---
 
-1.  **Which is true about C++ interfaces?**  
-    ✅ A class can implement multiple interfaces
-2.  **Which is false about abstract classes?**  
-    ❌ Abstract classes can be instantiated
+## 📝 Code Examples (with comments)
 
-## 📚 **Recommended Reading**
+### 1. C++ Polymorphic Animal Sounds
 
-*   Lafore, R. – _Object-Oriented Programming in C++_
-*   Weiss, M.A. – _Data Structures and Algorithm Analysis in C++_
-*   Gamma et al. – _Design Patterns_
-*   Hunt & Thomas – _The Pragmatic Programmer_
+```cpp
+#include <iostream>
+#include <memory>
+#include <vector>
+using std::cout; using std::endl;
+
+// ---------- Base Class ----------
+class Animal {
+public:
+    virtual void makeSound() const {          // default fallback
+        cout << "Some sound";
+    }
+    virtual ~Animal() = default;              // virtual dtor for safety
+};
+
+// ---------- Derived Classes ----------
+class Lion : public Animal {
+public:
+    void makeSound() const override {         // override = checked at compile
+        cout << "Roar";
+    }
+};
+
+class Bird : public Animal {
+public:
+    void makeSound() const override {
+        cout << "Tweet";
+    }
+};
+
+int main() {
+    // Store different animals via base‑class smart pointers
+    std::vector<std::unique_ptr<Animal>> zoo;
+    zoo.push_back(std::make_unique<Lion>());
+    zoo.push_back(std::make_unique<Bird>());
+
+    // Dynamic dispatch: same call, varied behaviour
+    for (const auto &a : zoo) {
+        a->makeSound();
+        cout << '\n';
+    }
+}
+```
+
+### 2. Python Equivalent
+
+```python
+class Animal:
+    def make_sound(self):
+        print("Some sound")
+
+class Lion(Animal):
+    def make_sound(self):
+        print("Roar")
+
+class Bird(Animal):
+    def make_sound(self):
+        print("Tweet")
+
+zoo = [Lion(), Bird()]
+for a in zoo:
+    a.make_sound()   # dynamic dispatch via duck typing
+```
+
+*Python uses dynamic lookup – no `virtual` keyword needed.*
+
+---
+
+## 🔑 Benefits Recap
+
+* **Flexibility & Extensibility** – add new types easily.
+* **Maintainability** – interface‑centric design reduces coupling.
+* **Reusability** – algorithms operate on base pointers or interfaces.
+
+---
+
+## 📚 Recommended Reading
+
+* Lafore – *Object‑Oriented Programming in C++*
+* Weiss – *Data Structures and Algorithm Analysis in C++*
+* Gamma et al. – *Design Patterns*
+* Hunt & Thomas – *The Pragmatic Programmer*
+
+---
+
+**End of Week 1 Extended OOP Note**
