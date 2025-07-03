@@ -36,8 +36,7 @@
 
 * * *
 
-🧱 **Abstract Classes**
------------------------
+## 🧱 **Abstract Classes**
 
 ### 📌 What is an Abstract Class?
 
@@ -59,10 +58,7 @@
 *   Representing a **generic concept** (e.g., Vehicle, Animal)
 *   Sharing code across subclasses, but **forcing** them to implement specific behaviors
 
-* * *
-
-🔌 **Interfaces in C++**
-------------------------
+## 🔌 **Interfaces in C++**
 
 ### 📌 What is an Interface?
 
@@ -92,33 +88,25 @@
     };
     ```
 
-* * *
 
-🧠 **Abstract Class vs Interface**
-----------------------------------
+## 🧠 **Abstract Class vs Interface**
 
-| Feature | Abstract Class | Interface (Pure Abstract Class) |
-| --- | --- | --- |
-| Instantiable? | ❌ | ❌ |
-| Pure Virtual Methods | ✅ (at least one) | ✅ (all) |
-| Concrete Methods | ✅ | ❌ |
-| Member Variables | ✅ | ❌ |
-| Multiple Inheritance | ✅ | ✅ |
+| Feature              | Abstract Class   | Interface (Pure Abstract Class) |
+| -------------------- | ---------------- | ------------------------------- |
+| Instantiable?        | ❌                | ❌                               |
+| Pure Virtual Methods | ✅ (at least one) | ✅ (all)                         |
+| Concrete Methods     | ✅                | ❌                               |
+| Member Variables     | ✅                | ❌                               |
+| Multiple Inheritance | ✅                | ✅                               |
 
-* * *
-
-📝 **Sample Questions**
------------------------
+## 📝 **Sample Questions**
 
 1.  **Which is true about C++ interfaces?**  
     ✅ A class can implement multiple interfaces
 2.  **Which is false about abstract classes?**  
     ❌ Abstract classes can be instantiated
 
-* * *
-
-📚 **Recommended Reading**
---------------------------
+## 📚 **Recommended Reading**
 
 *   Lafore, R. – _Object-Oriented Programming in C++_
 *   Weiss, M.A. – _Data Structures and Algorithm Analysis in C++_
