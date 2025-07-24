@@ -26,7 +26,7 @@ Below are seven fundamental methodologies, each with its purpose, step-by-step p
 **Process:**
 
 1. **Data profiling:** Compute summary statistics (mean, median, variance) for each variable.
-2. **Visualization:** Create histograms for distributions, box plots for outliers, scatter plots for relationships.
+2. **Visualization:** Create histograms for distributions, box plots for outliers, and scatter plots for relationships.
 3. **Outlier detection:** Use IQR or z-score methods to flag extreme values.
 4. **Feature engineering ideas:** Note skewness or nonlinearity to guide transformations (e.g., log, square root).
 
