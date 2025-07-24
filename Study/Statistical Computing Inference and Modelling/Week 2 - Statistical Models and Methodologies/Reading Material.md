@@ -94,7 +94,7 @@ Below are seven fundamental methodologies, each with its purpose, step-by-step p
 
 **Key Considerations:**
 
-* Check convergence of numerical methods.
+* Check the convergence of numerical methods.
 * Ensure global (not local) optimum.
 
 **Example:** Using MLE to estimate parameters of a logistic regression predicting customer churn, yielding odds ratios for each predictor.
