@@ -98,7 +98,3 @@ Computer architecture does not stand alone; a layered software stack turns the r
 * **Instruction Set Architecture (ISA)** – The agreed language understood by hardware & compilers.
 * **Pipelining** – Overlapping instruction stages for higher throughput.
 * **Latency vs Throughput** – Delay for one task vs tasks completed per unit time.
-
----
-
-*“Understanding computer architecture is essential for anyone interested in building, programming, or even just using computers.” – Week 1 video*
