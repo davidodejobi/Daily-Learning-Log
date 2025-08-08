@@ -27,6 +27,7 @@ Computer architecture is the *blueprint* that specifies a computer’s interna
 | 5th (2000s–today) | Multicore & SoC     | Parallelism, on‑chip cache hierarchy | Apple M‑series |
 
 ### 4. Core Hardware Components
+``
 
 | Component                         | Purpose                                                                        | Key Notes from the Video                                                |
 | --------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
