@@ -213,7 +213,7 @@ Speed‑up_total = 1 / ((1 – p) + p/s)
 
 ---
 
-### 9  Design Trade‑Offs  Design Trade‑Offs
+### 9    Design Trade‑Offs
 
 | Trade‑off                 | Why It Matters                                                                 | Typical Mitigations                                                    |
 | ------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
